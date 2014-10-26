@@ -39,11 +39,12 @@ def create
 
 def code_check
 	@code = params[:code].downcase
-	puts '----------'
-	puts @code
-    respond_to do |format|
-	    format.js   {}
-	end
+	    # # format.js   {}
+      if @code == 'fisher620'
+        render :json => true
+      else
+        render :json => false
+      end
 end
 
  private

@@ -1,8 +1,8 @@
-<h1>yo</h1>
+<h1 id="test">yo</h1>
 
 <%= link_to 'home', controller: 'welcome', action: 'index' %>
 
-	<%= form_tag('/guests/code_check', remote: true) do %>
+	<%= form_tag('/guests/code_check', id: 'code_form') do %>
 		
 		<p>
 	    Enter Code: <br>
@@ -10,10 +10,52 @@
 	  </p>
 
 	  <p>
-	    <%= submit_tag 'submit' %>
+	    <%= submit_tag 'submit', :class => 'code_submit' %>
 	  </p>
 
 	<% end %>
 
 
-<div id="form"></div>
+<div id="form_response">
+
+	<div id="form_rsvp">
+			<%= form_for :guest, url: guests_path do |f| %>
+		  <p>
+		    <%= f.label :first_name %><br>
+		    <%= f.text_field :first_name %>
+		  </p>
+		 
+		  <p>
+		    <%= f.label :last_name %><br>
+		    <%= f.text_field :last_name %>
+		  </p>
+
+		  <p>
+		  	<%= f.radio_button(:rsvp, true) %>
+			<%= label_tag(:rsvp_yes, "I will be attending!") %>
+			<%= f.radio_button(:rsvp, false) %>
+			<%= label_tag(:rsvp_no, "Sorry. I can't make it.") %>
+		  </p>
+
+		 <p>
+			<%= f.radio_button(:food, "beef") %>
+			<%= label_tag(:foo_beef, "I want beef") %>
+			<%= f.radio_button(:food, "chicken") %>
+			<%= label_tag(:food_chicken, "I want chicken") %>
+			<%= f.radio_button(:food, "fish") %>
+			<%= label_tag(:food_fish, "I want fish") %>
+		  </p>
+
+		  <p>
+		    <%= f.submit %>
+		  </p>
+		<% end %>
+	</div>
+
+	<div id="form_error">
+		<h1>Not right</h1>
+	</div>
+
+</div>
+
+<%= javascript_include_tag "wedding" %>
