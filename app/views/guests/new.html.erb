@@ -1,0 +1,19 @@
+<h1>yo</h1>
+
+<%= link_to 'home', controller: 'welcome', action: 'index' %>
+
+	<%= form_tag('/guests/code_check', remote: true) do %>
+		
+		<p>
+	    Enter Code: <br>
+	    <%= text_field_tag :code %>
+	  </p>
+
+	  <p>
+	    <%= submit_tag 'submit' %>
+	  </p>
+
+	<% end %>
+
+
+<div id="form"></div>

@@ -1,0 +1,31 @@
+<%= form_for :guest, url: guests_path do |f| %>
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+ 
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+  	<%= f.radio_button(:rsvp, true) %>
+	<%= label_tag(:rsvp_yes, "I will be attending!") %>
+	<%= f.radio_button(:rsvp, false) %>
+	<%= label_tag(:rsvp_no, "Sorry. I can't make it.") %>
+  </p>
+
+ <p>
+	<%= f.radio_button(:food, "beef") %>
+	<%= label_tag(:foo_beef, "I want beef") %>
+	<%= f.radio_button(:food, "chicken") %>
+	<%= label_tag(:food_chicken, "I want chicken") %>
+	<%= f.radio_button(:food, "fish") %>
+	<%= label_tag(:food_fish, "I want fish") %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,64 @@
+<h1>created</h1>
+
+<p>
+  <strong>first name:</strong>
+  <%= @guest.first_name %>
+</p>
+ 
+<p>
+  <strong>last name:</strong>
+  <%= @guest.last_name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <% if @guest.rsvp == true %>
+  	<strong>You are attending</strong>
+  	<% else %>
+  	<strong>We will miss you</strong>
+  <% end %>
+</p>
+
+<p>
+  <strong>Food Choice:</strong>
+  <% if @guest.food == 'beef' %>
+  	<strong>You are eating beef</strong>
+  	<% elsif @guest.food == 'chicken' %>
+  	<strong>You are eating chicken</strong>
+  	<% else %>
+  	<strong>You are eating fish</strong>
+  <% end %>
+</p>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Attending</th>
+    <th>Food Choice</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+<% @guests.each do |guest| %>
+  <tr>
+    <td><%= guest.first_name %></td>
+    <td><%= guest.last_name %></td>
+    <% if guest.rsvp == true %>
+    	<td>Yes</td>
+    	<% else %>
+    	<td>No</td>
+    <% end %>
+    <% if guest.food == 'beef' %>
+    	<td>Beef</td>
+    	<% elsif guest.food == 'chicken' %>
+    	<td>Chicken</td>
+    	<% else  %>
+    	<td>Fish</td>
+    <% end %>
+    <td><%= link_to 'Show', guest_path(guest) %></td>
+    <td><%= link_to 'Edit', edit_guest_path(guest) %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'home', controller: 'welcome', action: 'index' %>

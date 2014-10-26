@@ -1,0 +1,46 @@
+<h1>Edit article</h1>
+ 
+<%= form_for @guest do |f| %>
+  <% if @guest.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@guest.errors.count, "error") %> prohibited
+      this guest from being saved:</h2>
+    <ul>
+    <% @guest.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+ 
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+  	<%= f.radio_button(:rsvp, true) %>
+	<%= label_tag(:rsvp_yes, "I will be attending!") %>
+	<%= f.radio_button(:rsvp, false) %>
+	<%= label_tag(:rsvp_no, "Sorry. I can't make it.") %>
+  </p>
+ 
+  <p>
+	<%= f.radio_button(:food, "beef") %>
+	<%= label_tag(:foo_beef, "I want beef") %>
+	<%= f.radio_button(:food, "chicken") %>
+	<%= label_tag(:food_chicken, "I want chicken") %>
+	<%= f.radio_button(:food, "fish") %>
+	<%= label_tag(:food_fish, "I want fish") %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Back', guests_path %>

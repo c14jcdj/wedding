@@ -1,0 +1,8 @@
+<% if @code == 'fisher620' %>
+$('#form').empty()
+// $('#form_code').css('display', 'none')
+$("<%= escape_javascript(render 'form') %>").appendTo("#form");
+<% else %>
+$('#form').empty()
+$('#form').append('Incorrect')
+<% end %>
