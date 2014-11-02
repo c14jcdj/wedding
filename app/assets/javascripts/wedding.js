@@ -11,6 +11,7 @@ $( "#code_form" ).on( "submit", function( event ) {
     	  		
     	  		$('#code_form').css('display', 'none')
     	  		$('#form_error').css('display', 'none')
+                $('.form h1').css('display', 'none')
     	  		$('#form_rsvp').css('display', 'block')
     	  		} else {
     	  		$('#form_error').css('display', 'block')

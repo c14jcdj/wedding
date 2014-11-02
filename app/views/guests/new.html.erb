@@ -1,22 +1,30 @@
 <div class="bg_rsvp"></div>
 
-<h1 id="test">yo</h1>
-
-
+<div class="rsvp_home_link">
 <%= link_to 'home', controller: 'welcome', action: 'index' %>
+</div>
 
+<div id="enter_code">
+
+	<div class="form">
+	<h1>Enter the Code on the back of the Save the Date card to RSVP</h1>
 	<%= form_tag('/guests/code_check', id: 'code_form') do %>
 		
 		<p>
-	    Enter Code: <br>
-	    <%= text_field_tag :code %>
-	  </p>
-
-	  <p>
-	    <%= submit_tag 'submit', :class => 'code_submit' %>
+	    Super Secret Password:
+	    <%= text_field_tag :code, nil, :class => 'enter_code_tag' %>
+	    <%= submit_tag 'Enter', :class => 'code_submit' %>
 	  </p>
 
 	<% end %>
+
+	<div id="form_error">
+		<h1>You were invited right? Try again &#2047 </h1>
+	</div>
+
+	</div>
+
+</div>
 
 
 <div id="form_response">
@@ -56,9 +64,7 @@
 		<% end %>
 	</div>
 
-	<div id="form_error">
-		<h1>Not right</h1>
-	</div>
+	
 
 </div>
 
