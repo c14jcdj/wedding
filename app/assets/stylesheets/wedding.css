@@ -361,16 +361,16 @@
 	font-size: 3em;
 }
 
-#enter_code {
+#enter_code, .created_outer {
 	width: 80%;
-	height: 300px;
+	height: 350px;
 	background-color: rgba(0,0,0, .5);
 	position: absolute;
 	top: 50%;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	margin: -150px auto 0;
+	margin: -175px auto 0;
 }
 
 #enter_code h1 {
@@ -398,16 +398,16 @@
 	font-size: 18px;
 }
 
-#enter_code .form {
+#enter_code .form , .created_inner{
 	width: 95%;
-	height: 250px;
+	height: 300px;
 	background-color: rgba(255,255,255, .8);
 	/*background-color: white;*/
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 50%;
-	margin: -125px auto;
+	margin: -150px auto;
 }
 
 #code_form {
@@ -420,7 +420,7 @@
 	margin: -50px auto 0;
 }
 
-.code_submit {
+.code_submit, .rsvp_submit {
 	margin-left: 20px;
 	height: 40px;
 	line-height: 40px;
@@ -429,7 +429,10 @@
 	font-size: .7em;
 	color: white;
 	font-family: 'Waltograph'
+}
 
+.rsvp_submit {
+	margin-left: 0;
 }
 
 #form_error {
@@ -439,4 +442,56 @@
 	left:0;
 	right: 0;
 	margin: 0 auto;
+}
+
+
+#form_rsvp{
+	position: absolute;
+	left:0;
+	width: 80%;
+	height: 150px;
+	right: 0;
+	top:30%;
+	margin: -75px auto 0;
+}
+
+#form_rsvp p, {
+	width: 100%;
+	text-align: center;
+}
+
+.overview  {
+	position: absolute;
+	left:0;
+	right: 0;
+	top:0;
+	margin: -25px auto 0 ;
+	width: 425px;
+	font-family: 'Waltograph';
+	font-size:2em;
+
+}
+
+.name_txt_fields {
+	height: 30px;
+	line-height: 30px;
+	font-size: .6em;
+	width: 250px;
+}
+
+.overview .names {
+	font-size: 1.2em;
+}
+
+.overview a {
+	text-decoration: none;
+}
+
+.overview a:not(.rsvp_link_mistake){
+	color: green;
+}
+
+.rsvp_link_mistake {
+	color: red;
+	margin-right: 50px;
 }

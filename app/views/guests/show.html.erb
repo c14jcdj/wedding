@@ -1,38 +1,45 @@
 <div class="bg_rsvp"></div>
 
-<h1>created</h1>
-
-<p>
+<div class='created_outer'>
+  <div class="created_inner">
+    <div class="overview">
+    <p class="names">
   <strong>first name:</strong>
   <%= @guest.first_name %>
 </p>
- 
-<p>
+<p class="names" style="margin-top: -10px;">
   <strong>last name:</strong>
   <%= @guest.last_name %>
 </p>
 
-<p>
+<p style="margin-top: -10px;">
   <strong>Status:</strong>
   <% if @guest.rsvp == true %>
-  	<strong>You are attending</strong>
-  	<% else %>
-  	<strong>We will miss you</strong>
+    <strong>You are attending</strong>
+    <% else %>
+    <strong>We will miss you</strong>
   <% end %>
 </p>
 
-<p>
+<p >
   <strong>Food Choice:</strong>
   <% if @guest.food == 'beef' %>
-  	<strong>You are eating beef</strong>
-  	<% elsif @guest.food == 'chicken' %>
+    <strong>You are eating beef</strong>
+    <% elsif @guest.food == 'chicken' %>
     <strong>You are eating chicken</strong>
     <% elsif @guest.food == 'fish' %>
-  	<strong>You are eating fish</strong>
-  	<% else %>
-  	<strong>Not Applicable</strong>
+    <strong>You are eating fish</strong>
+    <% else %>
+    <strong>Not Applicable</strong>
   <% end %>
 </p>
+  <%= link_to '&#2047 Made a mistake?' .html_safe, edit_guest_path(@guest), :class => 'rsvp_link_mistake' %>
+  <%= link_to '&#2047 Lock Me In!' .html_safe, controller: 'welcome', action: 'index' %>
+    </div>
+  </div>
+</div>
+
+
 
 <table>
   <tr>
