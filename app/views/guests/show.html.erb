@@ -25,6 +25,9 @@
   <% end %>
 </p>
 
+  <% if @guest.rsvp == true %>
+
+
 <p >
   <strong>Food Choice:</strong>
   <% if @guest.food == 'beef' %>
@@ -37,6 +40,9 @@
     <strong>Not Applicable</strong>
   <% end %>
 </p>
+
+  <% end %>
+
   <%= link_to 'Made a mistake?' , edit_guest_path(@guest), :class => 'rsvp_link_mistake' %>
   <%= link_to '&#2047 Lock Me In!' .html_safe, controller: 'welcome', action: 'index' %>
     </div>
