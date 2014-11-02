@@ -1,5 +1,9 @@
 <div class="bg_rsvp"></div>
 
+<div class="rsvp_home_link">
+<%= link_to 'home', controller: 'welcome', action: 'index' %>
+</div>
+
 <div class='created_outer'>
   <div class="created_inner">
     <div class="overview">
@@ -33,7 +37,7 @@
     <strong>Not Applicable</strong>
   <% end %>
 </p>
-  <%= link_to '&#2047 Made a mistake?' .html_safe, edit_guest_path(@guest), :class => 'rsvp_link_mistake' %>
+  <%= link_to 'Made a mistake?' , edit_guest_path(@guest), :class => 'rsvp_link_mistake' %>
   <%= link_to '&#2047 Lock Me In!' .html_safe, controller: 'welcome', action: 'index' %>
     </div>
   </div>
@@ -41,7 +45,7 @@
 
 
 
-<table>
+<!-- <table>
   <tr>
     <th>First Name</th>
     <th>Last Name</th>
@@ -73,5 +77,4 @@
   </tr>
 <% end %>
 </table>
-
-<%= link_to 'home', controller: 'welcome', action: 'index' %>
+ -->

@@ -207,6 +207,22 @@
     line-height: 100px;
 }
 
+#edit_rsvp h1 {
+	font-weight: bolder;
+	color: black;
+	text-shadow: 2px 2px #fff;
+   	width: 100%;
+	position: relative;
+	height: 90px;
+	margin: -80px auto 0;
+	text-align: center;
+	font-size: 4em;
+	font-family: 'Waltograph';
+	margin: 0;
+    min-height: 100px;
+    line-height: 100px;
+}
+
 #date {
 	width: 365px;
 	font-size: 3em;
@@ -420,7 +436,7 @@
 	margin: -50px auto 0;
 }
 
-.code_submit, .rsvp_submit {
+.code_submit, .rsvp_submit, .rsvp_update {
 	margin-left: 20px;
 	height: 40px;
 	line-height: 40px;
@@ -435,6 +451,13 @@
 	margin-left: 0;
 }
 
+.rsvp_update {
+	width: 150px;
+	font-size: .8em;
+	text-shadow: 2px 2px #000;
+
+}
+
 #form_error {
 	color: red;
 	position: absolute;
@@ -445,7 +468,7 @@
 }
 
 
-#form_rsvp{
+#form_rsvp, #edit_rsvp_form{
 	position: absolute;
 	left:0;
 	width: 80%;
@@ -453,6 +476,12 @@
 	right: 0;
 	top:30%;
 	margin: -75px auto 0;
+	text-align: center;
+}
+
+#edit_rsvp_form p {
+	font-size: 2em;
+	font-family: 'Waltograph'
 }
 
 #form_rsvp p, {
@@ -466,7 +495,7 @@
 	right: 0;
 	top:0;
 	margin: -25px auto 0 ;
-	width: 425px;
+	width: 450px;
 	font-family: 'Waltograph';
 	font-size:2em;
 
@@ -488,10 +517,23 @@
 }
 
 .overview a:not(.rsvp_link_mistake){
-	color: green;
+	color: white;
+	border: 1px solid black;
+	padding: 10px;
+	padding-top: 20px;
+	background-color: rgba(0,0,0, .7);
+	text-shadow: 2px 2px #000;
+
+
 }
 
 .rsvp_link_mistake {
-	color: red;
-	margin-right: 50px;
+	background-color: rgba(0,0,0, .7);
+	color: white;
+	margin-right: 20px;
+	text-shadow: 2px 2px red;
+
+	border: 1px solid black;
+	padding: 10px;
+	padding-top: 20px;
 }

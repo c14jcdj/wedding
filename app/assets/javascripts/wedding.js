@@ -33,6 +33,14 @@ $(".rsvp_no").on("change", function(){
   $('#form_food').css('display', 'none')
 });
 
+$(".rsvp_edit_yes").on("change", function(){
+  $('#edit_food').css('display', 'block')
+});
+
+$(".rsvp_edit_no").on("change", function(){
+  $('#edit_food').css('display', 'none')
+});
+
 
 
 

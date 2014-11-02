@@ -1,46 +1,50 @@
-<h1>Edit article</h1>
- 
-<%= form_for @guest do |f| %>
-  <% if @guest.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@guest.errors.count, "error") %> prohibited
-      this guest from being saved:</h2>
-    <ul>
-    <% @guest.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-  <% end %>
+<div id="edit_rsvp">
+  <h1>Edit RSVP</h1>
+</div>
+<div class="bg_rsvp"></div>
+
+
+<div class="created_outer">
+  <div class="created_inner">
+    <div id="edit_rsvp_form">
+    <%= form_for @guest do |f| %>
   <p>
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </p>
- 
-  <p>
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name , :class => 'name_txt_fields' %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, :class => 'name_txt_fields'  %>
   </p>
 
   <p>
-  	<%= f.radio_button(:rsvp, true) %>
-	<%= label_tag(:rsvp_yes, "I will be attending!") %>
-	<%= f.radio_button(:rsvp, false) %>
-	<%= label_tag(:rsvp_no, "Sorry. I can't make it.") %>
+
+    <%= f.radio_button(:rsvp, true, {:class => 'rsvp_edit_yes'}) %>
+  <%= label_tag(:rsvp_yes, "I will be attending!") %>
+  <%= f.radio_button(:rsvp, false) %>
+  <%= label_tag(:rsvp_no, "Sorry. I can't make it.", {:class => 'rsvp_edit_no'}) %>
   </p>
  
-  <p>
-	<%= f.radio_button(:food, "beef") %>
-	<%= label_tag(:foo_beef, "I want beef") %>
-	<%= f.radio_button(:food, "chicken") %>
-	<%= label_tag(:food_chicken, "I want chicken") %>
-	<%= f.radio_button(:food, "fish") %>
-	<%= label_tag(:food_fish, "I want fish") %>
+  <% if(@guest.rsvp == true) %>
+  <p id='edit_food' style='display:block'>
+    <% else %>
+  <p id='edit_food' style='display:none'>
+    <% end %>
+  <%= f.radio_button(:food, "beef") %>
+  <%= label_tag(:foo_beef, "I want beef") %>
+  <%= f.radio_button(:food, "chicken") %>
+  <%= label_tag(:food_chicken, "I want chicken") %>
+  <%= f.radio_button(:food, "fish") %>
+  <%= label_tag(:food_fish, "I want fish") %>
   </p>
- 
   <p>
-    <%= f.submit %>
+    <%= f.submit ' Update RSVP', :class => 'rsvp_update' %>
+    
   </p>
 <% end %>
+  </div>
+  </div>
+</div>
+
  
-<%= link_to 'Back', guests_path %>
+
+ 
+<%#= link_to 'Back', guests_path %>
