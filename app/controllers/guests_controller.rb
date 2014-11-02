@@ -7,8 +7,6 @@ def new
 end
 
 def create
-  puts'--------'
-  puts params[:guest]
 	@guest = Guest.new(guest_params)
  
   @guest.save

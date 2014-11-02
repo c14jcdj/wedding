@@ -8,7 +8,14 @@
 	display: none;
 }
 
-#bg_landing {
+/*.container {
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid blue;
+	overflow: hidden;
+}*/
+
+#bg_landing, #bg_about_us, #bg_wedding_party {
 	background-image: url('landing.JPG');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -19,6 +26,100 @@
 	right: 0;
 	z-index: -1;
 }
+
+#bg_about_us {
+	background-image: url('yogurtland.jpg');
+}
+
+#bg_wedding_party {
+	position: fixed;
+	background-image: url('aboutus.JPG');
+}
+
+#black_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.5);
+
+}
+
+.about_pic {
+	width: 40%;
+	text-align: center;
+	float: left;
+	position: absolute;
+	top:0;
+	left: 25px;
+	bottom: 0;
+
+}
+
+.about_home_link {
+	position: fixed;
+	font-family: 'Waltograph';
+	margin-top: 15px;
+	margin-left: 25px;
+	z-index: 10;
+}
+
+.about_home_link a {
+	text-decoration: none;
+	color: black;
+	text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;  
+	font-size: 3em;
+
+}
+
+
+.about_content_con {
+	width: 58%;
+	position: absolute;
+	/*background-color: rgba(255,255,255,.6);*/
+
+	right: 0;
+	top: 0;
+	bottom: 0;
+	color: white;
+
+	/*color: black;*/
+	font-size: 1.5em;
+	overflow: scroll;
+	color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+
+}
+
+.about_content {
+	width: 85%;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	font-size: 1.2em;
+
+
+}
+
+.about_pic img {
+	width: 90%;
+  	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background-color: rgba(0,0,0,.5);
+
+}
+
+
 
 #landing {
 	width: 100%;
@@ -58,7 +159,7 @@
 
 #landing_box {
 	height: 600px;
-	width: 70%;
+	width: 80%;
 	position: absolute;
   	top: 50%;
   	left: 0;
@@ -67,7 +168,7 @@
 }
 
 #title_landing {
-	width: 90%;
+	width: 100%;
 	position: relative;
 	height: 90px;
 	margin: -80px auto 0;
@@ -78,6 +179,11 @@
 #title_landing h1{
 	font-weight: bolder;
 	color: white;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
 	/*font-family: 'Calligraffitti', cursive;*/
 	/*font-family: 'Codystar', cursive;*/
 	font-family: 'Waltograph';
@@ -100,6 +206,11 @@
 	font-family: 'Waltograph';
 	/*font-family: 'Share Tech', sans-serif;*/
 	color: white;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
 	margin: 0;
 	line-height: 90px;
 }
@@ -113,6 +224,11 @@
 #countdown {
 	font-family: 'Waltograph';
 	color: white;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
 	width: 600px;
 	font-size: 3.5em;
 	text-align: center;
@@ -124,3 +240,58 @@
 	margin: 0 auto;
 	line-height: 90px;
 }
+
+#wedding_party  {
+	width: 100%;
+	text-align: center;
+}
+
+#wedding_party h1 {
+	color: black;
+	font-family: 'Waltograph';
+	font-size: 5.5em;
+	text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;  
+}
+
+.wedding_party_home_link {
+	position: fixed;
+	font-family: 'Waltograph';
+	top: 10px;
+	left: 25px;
+	z-index: 10;
+}
+
+.wedding_party_home_link a {
+	text-decoration: none;
+	color: black;
+	text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;  
+	font-size: 3em;
+
+}
+
+.bridal_party, .groomsmen {
+	width: 50%;
+	float: left;
+	background-color: red;
+}
+
+.groomsmen {
+	background-color: yellow;
+}
+
+.wpContainers {
+	width: 300px;
+	height: 200px;
+	background-color: blue;
+}
+
+
+

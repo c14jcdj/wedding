@@ -62,7 +62,25 @@ function countdown(){
 
 }
 
-countdown()
+
+    function appendWeddingPartyContainers (){
+        
+        var names = ['jo', 'blow', 'lo']
+
+        function weddingPartyContainers(name){
+            return '<div class="wpContainers"> \
+                    <h1>'+name+'</h1>\
+                    </div>'
+        }
+
+        for(var i=0; i < names.length; i++){
+            $('.bridal_party').append(weddingPartyContainers(names[i]))
+            $('.groomsmen').append(weddingPartyContainers(names[i]))
+        }
+    }
+
+appendWeddingPartyContainers()
+// countdown()
 
 
 
