@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/welcome/about", :to => "welcome#about"
   get "/welcome/bridal_party", :to => "welcome#bridal_party"
   get "/welcome/logistics", :to => "welcome#logistics"
+  get "/welcome/gallery", :to => "welcome#gallery"
 
   post "/guests/code_check", :to => "guests#code_check"
 

@@ -10,5 +10,8 @@ class WelcomeController < ApplicationController
 
   def logistics
   end
+
+  def gallery
+  end
   
 end
