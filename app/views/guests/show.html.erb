@@ -24,9 +24,11 @@
   <% if @guest.food == 'beef' %>
   	<strong>You are eating beef</strong>
   	<% elsif @guest.food == 'chicken' %>
-  	<strong>You are eating chicken</strong>
-  	<% else %>
+    <strong>You are eating chicken</strong>
+    <% elsif @guest.food == 'fish' %>
   	<strong>You are eating fish</strong>
+  	<% else %>
+  	<strong>Not Applicable</strong>
   <% end %>
 </p>
 
@@ -51,9 +53,11 @@
     <% if guest.food == 'beef' %>
     	<td>Beef</td>
     	<% elsif guest.food == 'chicken' %>
-    	<td>Chicken</td>
-    	<% else  %>
+      <td>Chicken</td>
+      <% elsif guest.food == 'fish' %>
     	<td>Fish</td>
+    	<% else  %>
+    	<td>NA</td>
     <% end %>
     <td><%= link_to 'Show', guest_path(guest) %></td>
     <td><%= link_to 'Edit', edit_guest_path(guest) %></td>

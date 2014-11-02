@@ -31,13 +31,14 @@
 		  </p>
 
 		  <p>
-		  	<%= f.radio_button(:rsvp, true) %>
+		  	<%= f.radio_button(:rsvp, true, {:class => "rsvp_yes"}) %>
 			<%= label_tag(:rsvp_yes, "I will be attending!") %>
-			<%= f.radio_button(:rsvp, false) %>
+			<%= f.radio_button(:rsvp, false, {:class => "rsvp_no"}) %>
 			<%= label_tag(:rsvp_no, "Sorry. I can't make it.") %>
 		  </p>
 
-		 <p>
+
+		 <p id='form_food'>
 			<%= f.radio_button(:food, "beef") %>
 			<%= label_tag(:foo_beef, "I want beef") %>
 			<%= f.radio_button(:food, "chicken") %>

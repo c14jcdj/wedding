@@ -1,8 +1,126 @@
 
-body {
-	background-color: blue;
+@font-face {
+        font-family: "Waltograph";
+        src: url(/assets/waltographUI.ttf) format("truetype");
+    }
+
+#form_rsvp, #form_error, #form_food {
+	display: none;
 }
 
-#form_rsvp, #form_error {
-	display: none;
+#bg_landing {
+	background-image: url('landing.JPG');
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+#landing {
+	width: 100%;
+	height: 60px;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#landing ul {
+	list-style: none;
+	overflow: hidden;
+	width: 700px;
+	position: absolute;
+	left: 50%;
+	margin-left: -370px;
+
+}
+
+#landing ul li {
+	float: left;
+	margin: 2%;
+	font-size: 1.5em;
+	position: relative;
+	margin-top: 0;
+}
+
+#landing ul li a {
+	text-decoration: none;
+	color: rgba(255,255,255,.8);
+}
+
+#landing ul li a:hover {
+	color: grey;
+}
+
+#landing_box {
+	height: 600px;
+	width: 70%;
+	position: absolute;
+  	top: 50%;
+  	left: 0;
+  	right: 0;
+  	margin: -300px auto 0;
+}
+
+#title_landing {
+	width: 90%;
+	position: relative;
+	height: 90px;
+	margin: -80px auto 0;
+	text-align: center;
+	font-size: 4em;
+}
+
+#title_landing h1{
+	font-weight: bolder;
+	color: white;
+	/*font-family: 'Calligraffitti', cursive;*/
+	/*font-family: 'Codystar', cursive;*/
+	font-family: 'Waltograph';
+	margin: 0;
+}
+
+#date {
+	width: 365px;
+	font-size: 3em;
+	text-align: center;
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	height: 90px;
+	margin: 0 auto;
+}
+
+#date h2 {
+	font-family: 'Waltograph';
+	/*font-family: 'Share Tech', sans-serif;*/
+	color: white;
+	margin: 0;
+	line-height: 90px;
+}
+
+.mickey {
+	float: left;
+	margin: 0 10px;
+	font-family: 'Waltograph';
+}
+
+#countdown {
+	font-family: 'Waltograph';
+	color: white;
+	width: 600px;
+	font-size: 3.5em;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 90px;
+	margin: 0 auto;
+	line-height: 90px;
 }
