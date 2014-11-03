@@ -42,7 +42,7 @@
 }
 
 #bg_wedding_details {
-	background-image: url('wedding_details.JPG');
+	background-image: url('site.jpg');
 	background-position: center;
 }
 
@@ -540,4 +540,68 @@
 
 #edit_food {
 	display: none;
+}
+
+.circle, .circle2 {
+	width: 650px;
+	height: 650px;
+	background-color: rgba(0,0,0,.6);
+	border-radius: 650px;
+	position: absolute;
+	top:0;
+}
+
+.circle2 {
+	width: 600px;
+	height: 600px;
+	border-radius: 600px;
+	background-color: rgba(255,255,255,.8);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	margin: -300px auto 0;
+}
+
+.circle_container {
+	position: absolute; 
+	width: 1150px;
+	left: 50%;
+	margin-left: -575px;
+	top: 150px;
+}
+
+.circle_text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom:0;
+	text-align: center;
+}
+
+#innerpic {
+	background-image: url('logistics.JPG');
+	background-size: cover	;
+	z-index: 10;
+}
+
+.circle_text h1 {
+	font-family: "Rokkitt", serif;
+	font-size: 3.5em;
+	color: #191970;
+	text-shadow: 2px 2px white;
+	margin: 0;
+}
+
+.circle_text h2 {
+	margin-top: 50px;
+}
+
+#tal_link a {
+	color: #191970;
+	font-family: 'Waltograph';
+	text-decoration: none;
+	font-size: 2em;
+
 }

@@ -24,7 +24,7 @@
   </p>
  
  <% dis = @guest.rsvp == true ? 'block' : 'none' %>
-  <p id='edit_food' style="display: <%= dis %>">
+  <p id='edit_food' style="display: <%= dis %>; height: 40px; line-height: 45px;">
   <%= f.radio_button(:food, "beef") %>
   <%= label_tag(:foo_beef, "I want beef") %>
   <%= f.radio_button(:food, "chicken") %>
