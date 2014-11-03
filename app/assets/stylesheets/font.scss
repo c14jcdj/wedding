@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Waltograph';
+  src: font-url("/assets/fonts/waltographui-webfont.eot");
+  src: font-url("/assets/fonts/waltographui-webfont.eot?#iefix") format("embedded-opentype"), 
+  font-url("/assets/fonts/waltographui-webfont.svg#icomoon") format("svg"), 
+  font-url("/assets/fonts/waltographui-webfont.woff") format("woff"), 
+  font-url("/assets/fonts/waltographui-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Waltograph";
+  src: font-url( asset-path("waltographui.eot") );
+  src: font-url( asset-path("waltographui.eot?#iefix") ) format("embedded-opentype"),
+       font-url( asset-path("waltographui.woff") ) format("woff"),
+       font-url( asset-path("waltographui.ttf") ) format("truetype"),
+       font-url( asset-path("waltographui.svg#fontcustom") ) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
