@@ -17,11 +17,11 @@
 
 @font-face {
   font-family: "Waltograph";
-  src: font-url( asset-path("waltographUI.eot") );
-  src: font-url( asset-path("waltographUI.eot?#iefix") ) format("embedded-opentype"),
-       font-url( asset-path("waltographUI.woff") ) format("woff"),
-       font-url( asset-path("waltographUI.ttf") ) format("truetype"),
-       font-url( asset-path("waltographUI.svg#fontcustom") ) format("svg");
+  src: font-url( asset-path("waltographui.eot") );
+  src: font-url( asset-path("waltographui.eot?#iefix") ) format("embedded-opentype"),
+       font-url( asset-path("waltographui.woff") ) format("woff"),
+       font-url( asset-path("waltographui.ttf") ) format("truetype"),
+       font-url( asset-path("waltographui.svg#fontcustom") ) format("svg");
   font-weight: normal;
   font-style: normal;
 }
