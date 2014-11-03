@@ -2,9 +2,13 @@
 @font-face {
         font-family: "Waltograph";
         /*src: url(/assets/waltographUI.ttf) format("truetype");*/
-        src: asset-url('waltographUI.ttf') format('truetype');
-    	font-weight: normal;
-    	font-style: normal;
+        src: asset_url('waltographUI.eot');
+    	src: asset_url('waltographUI.eot?#iefix') format('embedded-opentype'),
+         asset_url('waltographUI.woff') format('woff'),
+         asset_url('waltographUI.ttf') format('truetype'),
+         asset_url('waltographUI.svg#akagithin') format('svg');
+    font-weight: 300;
+    font-style: normal;
     }
 
 #form_rsvp, #form_error, #form_food {
