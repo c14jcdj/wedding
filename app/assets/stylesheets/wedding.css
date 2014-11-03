@@ -1,26 +1,17 @@
-
 @font-face {
-        font-family: "Waltograph";
-        /*src: url(/assets/waltographUI.ttf) format("truetype");*/
-        src: asset_url('waltographUI.eot');
-    	src: asset_url('waltographUI.eot?#iefix') format('embedded-opentype'),
-         asset_url('waltographUI.woff') format('woff'),
-         asset_url('waltographUI.ttf') format('truetype'),
-         asset_url('waltographUI.svg#akagithin') format('svg');
-    font-weight: 300;
-    font-style: normal;
-    }
+  font-family: 'Waltograph';
+  src: font-url("/assets/fonts/waltographui-webfont.eot");
+  src: font-url("/assets/fonts/waltographui-webfont.eot?#iefix") format("embedded-opentype"), 
+  font-url("/assets/fonts/waltographui-webfont.svg#icomoon") format("svg"), 
+  font-url("/assets/fonts/waltographui-webfont.woff") format("woff"), 
+  font-url("/assets/fonts/waltographui-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 #form_rsvp, #form_error, #form_food {
 	display: none;
 }
-
-/*.container {
-	width: 90%;
-	margin: 0 auto;
-	border: 1px solid blue;
-	overflow: hidden;
-}*/
 
 #bg_landing, #bg_about_us, #bg_wedding_party, #bg_wedding_details, .bg_rsvp, #bg_gallery {
 	background-image: url('landing.JPG');

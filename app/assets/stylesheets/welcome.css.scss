@@ -1,3 +1,15 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@font-face {
+  font-family: 'Waltograph';
+  src: font-url("/assets/fonts/waltographui-webfont.eot");
+  src: font-url("/assets/fonts/waltographui-webfont.eot?#iefix") format("embedded-opentype"), 
+  font-url("/assets/fonts/waltographui-webfont.svg#icomoon") format("svg"), 
+  font-url("/assets/fonts/waltographui-webfont.woff") format("woff"), 
+  font-url("/assets/fonts/waltographui-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
