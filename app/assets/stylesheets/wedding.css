@@ -1,7 +1,10 @@
 
 @font-face {
         font-family: "Waltograph";
-        src: url(/assets/waltographUI.ttf) format("truetype");
+        /*src: url(/assets/waltographUI.ttf) format("truetype");*/
+        src: asset-url('waltographUI.ttf') format('truetype');
+    	font-weight: normal;
+    	font-style: normal;
     }
 
 #form_rsvp, #form_error, #form_food {
