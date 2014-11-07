@@ -1,13 +1,4 @@
-@font-face {
-  font-family: 'Waltograph';
-  src: font-url("/assets/fonts/waltographui-webfont.eot");
-  src: font-url("/assets/fonts/waltographui-webfont.eot?#iefix") format("embedded-opentype"), 
-  font-url("/assets/fonts/waltographui-webfont.svg#icomoon") format("svg"), 
-  font-url("/assets/fonts/waltographui-webfont.woff") format("woff"), 
-  font-url("/assets/fonts/waltographui-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 #form_rsvp, #form_error, #form_food {
 	display: none;
