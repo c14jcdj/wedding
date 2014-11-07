@@ -237,10 +237,14 @@
 	line-height: 90px;
 }
 
-.mickey {
+.mickey, .mickeyUi {
 	float: left;
 	margin: 0 10px;
 	font-family: 'Waltograph';
+}
+
+.mickeyUi {
+	font-family: 'WaltographUi'
 }
 
 #countdown {
