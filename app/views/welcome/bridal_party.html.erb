@@ -29,6 +29,13 @@
 	        }
 	    }
 
+	    function bgOverlay() {
+    	 	var height = $(document).height()
+    	 	$('#bg_wedding_party').css('height', height)   
+	    }
+	    	window.addEventListener("load", bgOverlay, false);
+	    	window.addEventListener("resize", bgOverlay, false);
+
 	// appendWeddingPartyContainers()
 
 

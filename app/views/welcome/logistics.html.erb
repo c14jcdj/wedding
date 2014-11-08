@@ -48,3 +48,12 @@
 </div>
 
 <div ></div>
+
+<script type="text/javascript">
+    function bgOverlay() {
+	 	var height = $(document).height()
+	 	$('#bg_wedding_details').css('height', height)   
+    }
+    	window.addEventListener("load", bgOverlay, false);
+    	window.addEventListener("resize", bgOverlay, false);
+</script>

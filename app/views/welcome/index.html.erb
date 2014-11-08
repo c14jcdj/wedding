@@ -59,8 +59,14 @@
 	        + minutes + "mins " + seconds + "sec";  
 	     
 	    }, 1000);
-
 	}
+
+	function bgOverlay() {
+	 	var height = $(document).height()
+	 	$('#bg_landing').css('height', height)   
+	}
+	window.addEventListener("load", bgOverlay, false);
+	window.addEventListener("resize", bgOverlay, false);
 
 	countdown()
 </script>
