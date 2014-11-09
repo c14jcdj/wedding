@@ -638,7 +638,7 @@ border-right: 30px solid #202020;
 	position: absolute;
 	left: 0;
 	width: 40%;
-	top:38px;
+	top:0;
 	bottom:0;
 	background-size: cover;
 
@@ -653,7 +653,7 @@ border-right: 30px solid #202020;
 	width: 60%	;
 	position: absolute;
 	right: 0;
-	top: 38px;
+	top: 0;
 	bottom: 0;
 }
 
@@ -672,11 +672,16 @@ border-right: 30px solid #202020;
   -webkit-perspective: 800;
    /*width: 400px;*/
    /*height: 200px;*/
-    /*position: relative;*/
+    position: relative;
+    overflow: hidden;
+    height: 187px;
+    top: -20px;
     /*margin: 50px auto;*/
 }
 .flip .card.flipped {
   -webkit-transform: rotateY(-180deg);
+  -webkit-backface-visibility: visible ;
+
 }
 .flip .card {
   width: 100%;
