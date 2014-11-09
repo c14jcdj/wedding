@@ -31,7 +31,8 @@
 	        		"position" : 'Matron of Honor',
 	        		'klass' : '.cher',
 	        		'ice_cream' : 'Macadamia Nut',
-	        		'movie' : 'Up'
+	        		'movie' : 'Up',
+	        		'summary' : 'If anyone that knows me, knows about my sister and how much I love her. My sister and I have a bond like no other. My sister has always been and will be my best friend, role model, and hero. Even though we’re eight years apart, people think we’re twins sometimes even identical. I always thought of myself as a mini version of my sister. From going to the same college (UC Davis)  to playing the same sport (basketball baby!), I always wanted to be just like my big sister. Besides Ben, she is the only person that I can truly be my dorky self. From singing and dancing in the car to NSYNC to baking brownies every Monday night while watching the Bachelor, she is truly my twin. She was always there for me whenever I had heartbreak and was always there to give me hope that one day when I least expect it, I would finally meet that special person. Chermaine (aka Shimmey, Shims, Sissy, etc) is one of the smartest, most loving, and selfless people I have ever known. My sister has always put herself before others which is one of the many traits that I admire most about her. Being so selfless, Chermaine actually created this website from scratch ( *mind blown*). I can\'t thank my sister enough for what she\'s done for me. I’m so happy to have my sister stand by my side as my matron of honor for the best day of my life.'
 	        	},
 
 	        	{
@@ -66,39 +67,28 @@
 	        ]
 
 	        function weddingPartyContainers(wpBridal){
-	        		return	'<div class="wpContainers" id="'+wpBridal.name+'"> \
-	        			        <div class="wedding_party_names"><h2>'+wpBridal.name+'</h2></div> \
-		        				<div class="flip"> \
-		        			        <div class="card"> \
-		        			            <div class="face front"> \
-		        			                	<div class="wedding_party_pic_con"></div> \
-		        			                	<div class="info_container"> \
-		        			                		<h4>Favorite Ice Cream : '+wpBridal.ice_cream+' </h4> \
-		        			                		<h4>Favorite Disney Movie : '+wpBridal.movie+' </h4> \
-		        			                		<hr> \
-		        			                		<h3>'+wpBridal.position+'</h3> \
-		        			                	</div> \
-		        			            </div> \
-		        			            <div class="face back"> \
-		        			                Back Hello hjhjhjhjhjhjhjhhj\
-		        			            </div> \
-		        			        </div> \
-		        			    </div> \
-	        			        <div class="style_declarations"></div> \
-	        			</div> '
 
-	            // return '<div class="wpContainers" id="'+wpBridal.name+'"> \
-	            // 			<div class="wedding_party_names"><h2>'+wpBridal.name+'</h2></div> \
-	            // 			<div class="wedding_party_pic_con"> \
-	            // 			</div> \
-	            // 			<div class="info_container"> \
-		           //  			<h4>Favorite Ice Cream : '+wpBridal.ice_cream+' </h4> \
-		           //  			<h4>Favorite Disney Movie : '+wpBridal.movie+' </h4> \
-		           //  			<hr> \
-		           //  			<h3>'+wpBridal.position+'</h3> \
-	            // 			</div> \
-	            // 			<div class="style_declarations"></div> \
-	            //         </div>'
+	        	return '<div class="wpContainers" id="'+wpBridal.name+'"> \
+	        				<div class="wedding_party_names"><h2>'+wpBridal.name+'</h2></div> \
+	        		 		<div class="flip"> \
+        						<div class="card"> \
+            						<div class="face front"> \
+		        						<div class="wedding_party_pic_con"></div> \
+		        						<div class="info_container"> \
+		        							<h4>Favorite Ice Cream : '+wpBridal.ice_cream+' </h4> \
+		        							<h4>Favorite Disney Movie : '+wpBridal.movie+' </h4> \
+		        							<hr> \
+								        	<h3>'+wpBridal.position+'</h3> \
+								        	</div> \
+            						</div> \
+            						<div class="face back"> \
+                						<p>'+wpBridal.summary+'</p> \
+            						</div> \
+        						</div> \
+        					</div> \
+	        				<div class="style_declarations"></div> \
+    					</div> '
+	        		
 	        }
 
 	        for(var i=0; i < wpBridal.length; i++){
@@ -113,33 +103,22 @@
     	 	var height = $(document).height()
     	 	$('#bg_wedding_party').css('height', height)   
 	    }
+
+
 	    	window.addEventListener("load", bgOverlay, false);
 	    	window.addEventListener("resize", bgOverlay, false);
 
 	appendWeddingPartyContainers()
-	    	$('.flip').click(function(){
-        $(this).siblings('.style_declarations').css({
-        	'left' : '0',
-        	'right' : 'auto',
-        	'border-top': '30px solid #eee',
-        	'border-bottom': '30px solid #202020',
-        	'border-left': '30px solid #202020',
-        	'border-right': '30px solid #eee'
-        })
-        $(this).find('.card')
+	    	$('.flip').mouseenter(function(){
+	    $(this).find('.card')
         .addClass('flipped')
+        $(this).siblings('.style_declarations').css({
+        	'border-top': '30px solid transparent',
+        	'border-left': '30px solid transparent'
+        })
         $(this).find('.card')
         .mouseleave(function(){
             $(this).removeClass('flipped');
-            $(this).parent().siblings('.style_declarations').css({
-        	'left' : 'auto',
-        	'right' : '0',
-        	'border-top': '30px solid #eee',
-        	'border-bottom': '30px solid #202020',
-        	'border-left': '30px solid #eee',
-        	'border-right': '30px solid #202020'
-        })
-
 
         });
         return false;

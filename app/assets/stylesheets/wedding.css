@@ -670,18 +670,14 @@ border-right: 30px solid #202020;
 
 .flip {
   -webkit-perspective: 800;
-   /*width: 400px;*/
-   /*height: 200px;*/
-    position: relative;
-    overflow: hidden;
-    height: 187px;
-    top: -20px;
-    /*margin: 50px auto;*/
+    position: absolute;
+    top:38px;
+    bottom: 0;
+    left: 0;
+    right:0;
 }
 .flip .card.flipped {
   -webkit-transform: rotateY(-180deg);
-  -webkit-backface-visibility: visible ;
-
 }
 .flip .card {
   width: 100%;
@@ -689,28 +685,29 @@ border-right: 30px solid #202020;
   -webkit-transform-style: preserve-3d;
   -webkit-transition: 0.5s;
 }
+
 .flip .card .face {
   width: 100%;
   height: 100%;
-  /*position: absolute;*/
+  position: absolute;
   -webkit-backface-visibility: hidden ;
   z-index: 2;
-    /*font-family: Georgia;*/
-    /*font-size: 3em;*/
-    /*text-align: center;*/
-    /*line-height: 200px;*/
 }
 .flip .card .front {
-  /*position: absolute;*/
+  position: absolute;
   z-index: 1;
-    /*background: black;*/
-    /*color: white;*/
-    /*cursor: pointer;*/
+    cursor: pointer;
 }
 .flip .card .back {
   -webkit-transform: rotateY(-180deg);
-    /*background: blue;*/
-    /*background: white;*/
-    /*color: black;*/
-    /*cursor: pointer;*/
+    background: #eee;
+    color: black;
+    cursor: pointer;
+    overflow: scroll;
+}
+
+.back p {
+	padding: 0 25px;
+	font-family: 'Rokkitt', serif;
+	font-size: 1.2em;
 }
