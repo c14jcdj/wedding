@@ -1,15 +1,17 @@
 <div id="bg_wedding_party"></div>
-<div id="wedding_party">
-<h1>The Wedding Party</h1>
-</div>
+
 <div class='wedding_party_home_link'>
 <%= link_to 'home', controller: 'welcome', action: 'index' %>
 </div>
 
-<div class="groomsmen">
-	
-</div>
-<div class="bridal_party">
+
+<div id="wedding_party_landing"></div>
+
+
+<div id="wedding_party">
+	<h1>The Wedding Party</h1>
+	<div class="groomsmen"> </div>
+<div class="bridal_party"> </div>
 </div>
 
 <div class="cher" style='display:none'>
@@ -99,14 +101,14 @@
 	        }
 	    }
 
-	    function bgOverlay() {
-    	 	var height = $(document).height()
-    	 	$('#bg_wedding_party').css('height', height)   
-	    }
+	    // function bgOverlay() {
+    	//  	var height = $(document).height()
+    	//  	$('#bg_wedding_party').css('height', height)   
+	    // }
 
 
-	    	window.addEventListener("load", bgOverlay, false);
-	    	window.addEventListener("resize", bgOverlay, false);
+	    // 	window.addEventListener("load", bgOverlay, false);
+	    // 	window.addEventListener("resize", bgOverlay, false);
 
 	appendWeddingPartyContainers()
 	    	$('.flip').mouseenter(function(){

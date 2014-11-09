@@ -272,6 +272,15 @@
 	text-align: center;
 }
 
+#wedding_party {
+	background-color: #eee;
+	position: absolute;
+	overflow: hidden;
+	top: 400px;
+	margin-bottom: 600px;
+
+}
+
 #gallery_title h1 {
 	color: white;
 	font-family: 'Waltograph';
@@ -345,23 +354,22 @@
 
 .bridal_party, .groomsmen {
 	width: 50%;
-	position: absolute;
 	background-color: #202020;
 }
 
 .bridal_party {
-	right: 0;
+	float: right;
 }
 
 .groomsmen {
-	left: 0;
+	float: left;
 }
 
 .wpContainers {
 	width: 470px;
 	height: 225px;
 	position: relative;
-	margin: 0 auto;
+	margin: 55px auto;
 	background-color: #eee;
 	border-top-left-radius: 2em ; 
 	border-top-right-radius: 2em ; 
@@ -710,4 +718,15 @@ border-right: 30px solid #202020;
 	padding: 0 25px;
 	font-family: 'Rokkitt', serif;
 	font-size: 1.2em;
+}
+
+#wedding_party_landing {
+	width: 100%;
+	height: 400px;
+	background-image: url('wp.JPG');
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	top:0;
+
 }
