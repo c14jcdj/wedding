@@ -66,18 +66,39 @@
 	        ]
 
 	        function weddingPartyContainers(wpBridal){
-	            return '<div class="wpContainers" id="'+wpBridal.name+'"> \
-	            			<div class="wedding_party_names"><h2>'+wpBridal.name+'</h2></div> \
-	            			<div class="wedding_party_pic_con"> \
-	            			</div> \
-	            			<div class="info_container"> \
-		            			<h4>Favorite Ice Cream : '+wpBridal.ice_cream+' </h4> \
-		            			<h4>Favorite Disney Movie : '+wpBridal.movie+' </h4> \
-		            			<hr> \
-		            			<h3>'+wpBridal.position+'</h3> \
-	            			</div> \
-	            			<div class="style_declarations"></div> \
-	                    </div>'
+	        	return '<div class="flip"> \
+	        			        <div class="card"> \
+	        			            <div class="face front"> \
+	        			                <div class="wpContainers" id="'+wpBridal.name+'"> \
+	        			                	<div class="wedding_party_names"><h2>'+wpBridal.name+'</h2></div> \
+	        			                	<div class="wedding_party_pic_con"></div> \
+	        			                	<div class="info_container"> \
+	        			                		<h4>Favorite Ice Cream : '+wpBridal.ice_cream+' </h4> \
+	        			                		<h4>Favorite Disney Movie : '+wpBridal.movie+' </h4> \
+	        			                		<hr> \
+	        			                		<h3>'+wpBridal.position+'</h3> \
+	        			                	</div> \
+	        			                	<div class="style_declarations"></div> \
+	        			                </div> \
+	        			            </div> \
+	        			            <div class="face back"> \
+	        			                Back \
+	        			            </div> \
+	        			        </div> \
+	        			    </div> '
+
+	            // return '<div class="wpContainers" id="'+wpBridal.name+'"> \
+	            // 			<div class="wedding_party_names"><h2>'+wpBridal.name+'</h2></div> \
+	            // 			<div class="wedding_party_pic_con"> \
+	            // 			</div> \
+	            // 			<div class="info_container"> \
+		           //  			<h4>Favorite Ice Cream : '+wpBridal.ice_cream+' </h4> \
+		           //  			<h4>Favorite Disney Movie : '+wpBridal.movie+' </h4> \
+		           //  			<hr> \
+		           //  			<h3>'+wpBridal.position+'</h3> \
+	            // 			</div> \
+	            // 			<div class="style_declarations"></div> \
+	            //         </div>'
 	        }
 
 	        for(var i=0; i < wpBridal.length; i++){
@@ -96,6 +117,13 @@
 	    	window.addEventListener("resize", bgOverlay, false);
 
 	appendWeddingPartyContainers()
+	    	$('.flip').click(function(){
+        $(this).find('.card').addClass('flipped').mouseleave(function(){
+            // $(this).removeClass('flipped');
+        });
+        return false;
+    });
+
 
 
 </script>
