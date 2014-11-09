@@ -736,3 +736,12 @@ border-right: 30px solid #202020;
 	top:0;
 
 }
+
+.style_image {
+	width: 600px; 
+	height: 300px; 
+	top: 0px; 
+	left: 0px; 
+	-webkit-transform: perspective(2000px); 
+	position: absolute;
+}
