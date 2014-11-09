@@ -174,14 +174,6 @@
                 <%= image_tag('gal24.JPG', :class => 'test')%>
                 <%= image_tag('gal24.JPG', :u => 'thumb')%>
             </div>
-            <div>
-                <%= image_tag('gal25.JPG', :class => 'test')%>
-                <%= image_tag('gal25.JPG', :u => 'thumb')%>
-            </div>
-            <div>
-                <%= image_tag('gal26.JPG', :class => 'test')%>
-                <%= image_tag('gal26.JPG', :u => 'thumb')%>
-            </div>
         </div>
         
         <!-- Thumbnail Navigator Skin Begin -->
@@ -297,4 +289,11 @@
         <!-- Trigger -->
     </div>
     <!-- Jssor Slider End -->
-
+<script type="text/javascript">
+	function bgOverlay() {
+	 	var height = $(document).height()
+	 	$('#bg_gallery').css('height', height)   
+	}
+	window.addEventListener("load", bgOverlay, false);
+	window.addEventListener("resize", bgOverlay, false);
+</script>
