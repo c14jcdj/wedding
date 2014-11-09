@@ -15,17 +15,38 @@
 	
 	    function appendWeddingPartyContainers (){
 	        
-	        var names = ['jo', 'blow', 'lo']
+	        var wpBridal = [
+	        	{ 
+	        		"name" : 'Chermaine',
+	        		position : 'Matron of Honor'
+	        	},
 
-	        function weddingPartyContainers(name){
+	        	{
+	        		"name" : 'Amanda',
+	        		position : 'Bridesmaid'
+	        	},
+
+	        	{
+	        		"name" : 'Jasmine',
+	        		position : 'Bridesmaid'
+	        	},
+	        	{
+	        		"name" : 'Jenn',
+	        		position : 'Bridesmaid'
+	        	}
+
+	        ]
+
+	        function weddingPartyContainers(wpBridal){
 	            return '<div class="wpContainers"> \
-	                    <h1>'+name+'</h1>\
+	            			<div class="wedding_party_names"><h2>'+wpBridal.name+'</h2></div> \
+	            			<div class="style_declarations"></div> \
 	                    </div>'
 	        }
 
-	        for(var i=0; i < names.length; i++){
-	            $('.bridal_party').append(weddingPartyContainers(names[i]))
-	            $('.groomsmen').append(weddingPartyContainers(names[i]))
+	        for(var i=0; i < wpBridal.length; i++){
+	            $('.bridal_party').append(weddingPartyContainers(wpBridal[i]))
+	            $('.groomsmen').append(weddingPartyContainers(wpBridal[i]))
 	        }
 	    }
 
@@ -36,7 +57,7 @@
 	    	window.addEventListener("load", bgOverlay, false);
 	    	window.addEventListener("resize", bgOverlay, false);
 
-	// appendWeddingPartyContainers()
+	appendWeddingPartyContainers()
 
 
 </script>

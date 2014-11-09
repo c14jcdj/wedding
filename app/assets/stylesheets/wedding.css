@@ -345,18 +345,27 @@
 
 .bridal_party, .groomsmen {
 	width: 50%;
-	float: left;
-	background-color: red;
+	position: absolute;
+	background-color: #202020;
+}
+
+.bridal_party {
+	right: 0;
 }
 
 .groomsmen {
-	background-color: yellow;
+	left: 0;
 }
 
 .wpContainers {
-	width: 300px;
-	height: 200px;
-	background-color: blue;
+	width: 60%;
+	height: 225px;
+	position: relative;
+	margin: 0 auto;
+	background-color: #eee;
+	border-top-left-radius: 2em ; 
+	border-top-right-radius: 2em ; 
+
 }
 
 #logistics {
@@ -597,4 +606,30 @@
 	text-decoration: none;
 	font-size: 2em;
 
+}
+
+.wedding_party_names {
+	background-color: rgb(212,212,212);
+	border-top-left-radius: 20px; 
+	border-top-right-radius: 20px; 
+
+
+}
+
+.wedding_party_names h2 {
+	color: rgb(48,48,48);
+	padding: 3px;
+	padding-left: 10px;
+	font-family: 'Waltograph'
+}
+
+.style_declarations {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 0px; line-height: 0%; width: 0px;
+border-top: 30px solid #eee;
+border-bottom: 30px solid #202020;
+border-left: 30px solid #eee;
+border-right: 30px solid #202020;
 }
