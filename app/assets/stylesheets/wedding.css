@@ -358,7 +358,7 @@
 }
 
 .wpContainers {
-	width: 60%;
+	width: 470px;
 	height: 225px;
 	position: relative;
 	margin: 0 auto;
@@ -633,3 +633,38 @@ border-bottom: 30px solid #202020;
 border-left: 30px solid #eee;
 border-right: 30px solid #202020;
 }
+
+.wedding_party_pic_con {
+	position: absolute;
+	left: 0;
+	width: 40%;
+	top:38px;
+	bottom:0;
+	background-size: cover;
+
+}
+
+.wedding_party_pic_con img {
+	width: 188px;
+	height: 188px
+}
+
+.info_container {
+	width: 60%	;
+	position: absolute;
+	right: 0;
+	top: 38px;
+	bottom: 0;
+}
+
+.info_container h4 {
+	padding-left: 10px;
+	font-family: 'Rokkitt', serif;
+}
+
+.info_container h3 {
+	padding-left: 10px;
+	font-family: 'Codystar', cursive;
+
+}
+

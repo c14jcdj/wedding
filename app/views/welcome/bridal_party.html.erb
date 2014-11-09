@@ -7,9 +7,19 @@
 </div>
 
 <div class="groomsmen">
+	
 </div>
 <div class="bridal_party">
 </div>
+
+<div class="cher" style='display:none'>
+	<%= image_tag('me.jpg')%>
+</div> 
+
+
+
+
+
 
 <script type="text/javascript">
 	
@@ -18,28 +28,54 @@
 	        var wpBridal = [
 	        	{ 
 	        		"name" : 'Chermaine',
-	        		position : 'Matron of Honor'
+	        		"position" : 'Matron of Honor',
+	        		'klass' : '.cher',
+	        		'ice_cream' : 'Macadamia Nut',
+	        		'movie' : 'Up'
 	        	},
 
 	        	{
 	        		"name" : 'Amanda',
-	        		position : 'Bridesmaid'
+	        		"position" : 'Bridesmaid',
+	        		'klass' : '.cher',
+	        		'ice_cream' : 'Macadamia Nut',
+	        		'movie' : 'Up'
+
+
 	        	},
 
 	        	{
 	        		"name" : 'Jasmine',
-	        		position : 'Bridesmaid'
+	        		"position" : 'Bridesmaid',
+	        		'klass' : '.cher',
+	        		'ice_cream' : 'Macadamia Nut',
+	        		'movie' : 'Up'
+
+
 	        	},
 	        	{
 	        		"name" : 'Jenn',
-	        		position : 'Bridesmaid'
+	        		"position" : 'Bridesmaid',
+	        		'klass' : '.cher',
+	        		'ice_cream' : 'Macadamia Nut',
+	        		'movie' : 'Up'
+
+
 	        	}
 
 	        ]
 
 	        function weddingPartyContainers(wpBridal){
-	            return '<div class="wpContainers"> \
+	            return '<div class="wpContainers" id="'+wpBridal.name+'"> \
 	            			<div class="wedding_party_names"><h2>'+wpBridal.name+'</h2></div> \
+	            			<div class="wedding_party_pic_con"> \
+	            			</div> \
+	            			<div class="info_container"> \
+		            			<h4>Favorite Ice Cream : '+wpBridal.ice_cream+' </h4> \
+		            			<h4>Favorite Disney Movie : '+wpBridal.movie+' </h4> \
+		            			<hr> \
+		            			<h3>'+wpBridal.position+'</h3> \
+	            			</div> \
 	            			<div class="style_declarations"></div> \
 	                    </div>'
 	        }
@@ -47,6 +83,8 @@
 	        for(var i=0; i < wpBridal.length; i++){
 	            $('.bridal_party').append(weddingPartyContainers(wpBridal[i]))
 	            $('.groomsmen').append(weddingPartyContainers(wpBridal[i]))
+	            var pic = $(wpBridal[i].klass).html()
+	            $('#'+wpBridal[i].name+' .wedding_party_pic_con').append(pic)
 	        }
 	    }
 
