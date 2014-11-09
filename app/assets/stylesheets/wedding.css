@@ -267,18 +267,23 @@
 	line-height: 90px;
 }
 
-#wedding_party , #logistics, #gallery_title {
+#logistics, #gallery_title {
 	width: 100%;
 	text-align: center;
 }
 
 #wedding_party {
+	width: 100%;
 	background-color: #eee;
 	position: absolute;
 	overflow: hidden;
 	top: 400px;
 	margin-bottom: 600px;
 
+}
+
+#wedding_party h1 {
+	text-align: center;
 }
 
 #gallery_title h1 {
@@ -366,7 +371,7 @@
 }
 
 .wpContainers {
-	width: 470px;
+	width: 570px;
 	height: 225px;
 	position: relative;
 	margin: 55px auto;
@@ -636,16 +641,16 @@
 	bottom: 0;
 	right: 0;
 	font-size: 0px; line-height: 0%; width: 0px;
-border-top: 30px solid #eee;
+border-top: 30px solid transparent;
 border-bottom: 30px solid #202020;
-border-left: 30px solid #eee;
+border-left: 30px solid transparent;
 border-right: 30px solid #202020;
 }
 
 .wedding_party_pic_con {
 	position: absolute;
 	left: 0;
-	width: 40%;
+	width: 188px;
 	top:0;
 	bottom:0;
 	background-size: cover;
@@ -653,12 +658,12 @@ border-right: 30px solid #202020;
 }
 
 .wedding_party_pic_con img {
-	width: 188px;
-	height: 188px
+	width: 187px;
+	height: 187px;
 }
 
 .info_container {
-	width: 60%	;
+	width: 370px	;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -667,6 +672,7 @@ border-right: 30px solid #202020;
 
 .info_container h4 {
 	padding-left: 10px;
+	font-size: 1.1em;
 	font-family: 'Rokkitt', serif;
 }
 
