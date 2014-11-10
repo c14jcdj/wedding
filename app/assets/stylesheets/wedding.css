@@ -274,16 +274,17 @@
 
 #wedding_party {
 	width: 100%;
-	background-color: #eee;
+	background-color: transparent;
 	position: absolute;
 	overflow: hidden;
 	top: 400px;
-	margin-bottom: 600px;
+	left: 0;
 
 }
 
 #wedding_party h1 {
 	text-align: center;
+	background-color: #eee;
 }
 
 #gallery_title h1 {
@@ -734,6 +735,7 @@ border-right: 30px solid #202020;
 	background-position: center;
 	position: absolute;
 	top:0;
+	left: 0;
 
 }
 
