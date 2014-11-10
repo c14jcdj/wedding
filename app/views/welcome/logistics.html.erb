@@ -1,8 +1,15 @@
 <div id="bg_wedding_details"></div>
-<div class="logistics_home_link" >
-<%= link_to 'home', controller: 'welcome', action: 'index' %>
-</div>
 
+<footer id='landing' style="top:0; z-index:100;">
+	<ul>
+		<li><%= link_to 'RSVP', controller: 'guests', action: 'new' %></li>
+		<li><%= link_to 'About Us', controller: 'welcome', action: 'about' %></li>
+		<li><%= link_to 'Meet the Wedding Party', controller: 'welcome', action: 'bridal_party' %></li>
+		<li><%= link_to 'Gallery', controller: 'welcome', action: 'gallery' %></li>
+		<li><%= link_to 'Home', controller: 'welcome', action: 'index' %></li>
+	</ul>
+	
+</footer>
 
 <div class="circle_container" >
 	<div class='circle' style="left: 0">
@@ -46,6 +53,9 @@
 	</div>
 
 </div>
+
+
+
 
 <div ></div>
 

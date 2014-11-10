@@ -5,10 +5,20 @@
 <h1>Gallery</h1>
 </div>
 
-<div class='gallery_home_link' >
+<!-- <div class='gallery_home_link' >
 		<%= link_to 'Home', controller: 'welcome', action: 'index'%>
-</div>
+</div> -->
 
+<footer id='landing'>
+	<ul>
+		<li><%= link_to 'RSVP', controller: 'guests', action: 'new' %></li>
+		<li><%= link_to 'About Us', controller: 'welcome', action: 'about' %></li>
+		<li><%= link_to 'Meet the Wedding Party', controller: 'welcome', action: 'bridal_party' %></li>
+		<li><%= link_to 'Wedding Logistics', controller: 'welcome', action: 'logistics' %></li>
+		<li><%= link_to 'Home', controller: 'welcome', action: 'index'%></li>
+	</ul>
+	
+</footer>
 
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
     <!-- use jssor.slider.mini.js (40KB) or jssor.sliderc.mini.js (32KB, with caption, no slideshow) or jssor.sliders.mini.js (28KB, no caption, no slideshow) instead for release -->
@@ -63,7 +73,7 @@
     <!-- Jssor Slider Begin -->
     <!-- You can move inline styles to css file or css block. -->
     <div id="slider1_container" style="position: relative; width: 720px;
-        height: 480px; overflow: hidden; margin: 0 auto; border: 5px solid white; border-top: 3px solid white; border-left: 3px white solid;">
+        height: 480px; background-color: black;overflow: hidden; margin: 0 auto; border: 5px solid white; border-top: 3px solid white; border-left: 3px white solid;">
 
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
