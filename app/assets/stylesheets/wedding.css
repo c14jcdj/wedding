@@ -132,20 +132,24 @@
 
 #landing ul {
 	list-style: none;
-	overflow: hidden;
-	width: 900px;
+	display: inline-block;
+	padding-left: 0;
+	font-size: 1.2em;
 	position: absolute;
-	left: 50%;
-	margin-left: -470px;
+	left: 0;
+	right: 0;
+	text-align: center;
 
 }
 
 #landing ul li {
-	float: left;
+	display: inline-block;
+	margin: 0 20px;
+	/*float: left;
 	margin: 2%;
 	font-size: 1.5em;
 	position: relative;
-	margin-top: 0;
+	margin-top: 0;*/
 }
 
 #landing ul li a {
@@ -360,7 +364,7 @@
 }
 
 .bridal_party {
-	float: right;
+	float: left;
 }
 
 .groomsmen {
