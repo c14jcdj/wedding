@@ -16,20 +16,67 @@
 	<div id="countdown"></div>
 <!-- </div> -->
 
+<!-- <div id="landing_mobile">
+	<ul>
+		<li><%= link_to 'RSVP', controller: 'guests', action: 'new' %></li>
+		<li><%= link_to 'About Us', controller: 'welcome', action: 'about' %></li>
+		<li><%= link_to 'Wedding Party', controller: 'welcome', action: 'bridal_party' %></li>
+		<li><%= link_to 'Logistics', controller: 'welcome', action: 'logistics' %></li>
+		<li><%= link_to 'Gallery', controller: 'welcome', action: 'gallery' %></li>
+	</ul>
+</div> -->
+<div id="footer_mobile" style="position: absolute; left:0; right:0; bottom: 0; height: 300px;">
+	<div class="mobile_button">
+		<div class= 'upper_left'>
+			<div class='mickeyUi' >
+				<%= link_to 'About Us', controller: 'welcome', action: 'about' %>
+			</div>
+		</div>
+	</div>
+	<div class="mobile_button">
+		<div class="upper_right">
+			<div class='mickeyUi' >
+				<%= link_to 'Wedding Party', controller: 'welcome', action: 'bridal_party' %>
 
+			</div>
+		</div>
+	</div>
+	<div class="mobile_button">
+		<div class="lower_left">
+			<div class='mickeyUi' >
+				<%= link_to 'Logistics', controller: 'welcome', action: 'logistics' %>
+			</div>
+		</div>
+	</div>
+	<div class="mobile_button">
+		<div class="lower_right">
+			<div class='mickeyUi' >
+				<%= link_to 'Gallery', controller: 'welcome', action: 'gallery' %>
+			</div>
+		</div>
+	</div>
+	<div class="mobile_button">
+		<div class="center">
+			<div class="center_mobile">
+				<%= link_to 'RSVP', controller: 'guests', action: 'new' %>
+			</div>
+			<div class='mickeyUi' style="text-shadow:
+    -5px -1px 5px #eee,
+    5px -1px 5px #eee,
+    -5px 1px 5px #eee,
+    5px 1px 5px #eee;  " >&#x00AA;</div>
+		</div>
+	</div>
+</div>
 
 <footer id='landing'>
 	<ul>
 		<li><%= link_to 'RSVP', controller: 'guests', action: 'new' %></li>
 		<li><%= link_to 'About Us', controller: 'welcome', action: 'about' %></li>
-		<li><%= link_to 'Meet the Wedding Party', controller: 'welcome', action: 'bridal_party' %></li>
+		<li><%= link_to 'Wedding Party', controller: 'welcome', action: 'bridal_party' %></li>
 		<li><%= link_to 'Wedding Logistics', controller: 'welcome', action: 'logistics' %></li>
 		<li><%= link_to 'Gallery', controller: 'welcome', action: 'gallery' %></li>
 	</ul>
-	
-	
-	
-	
 </footer>
 
 <script type="text/javascript">
