@@ -551,8 +551,8 @@
 	width: 100%;
 	text-align: center;
 	font-family: 'Waltograph';
-	height:60px;
-	line-height: 60px;
+	/*height:60px;*/
+	/*line-height: 60px;*/
 	text-shadow:
     -1px -1px 0 #fff,
     1px -1px 0 #fff,
@@ -574,14 +574,13 @@
 
 #enter_code .form , .created_inner{
 	width: 95%;
-	height: 300px;
+	height: 90%;
 	background-color: rgba(255,255,255, .8);
 	/*background-color: white;*/
 	position: absolute;
-	left: 0;
-	right: 0;
+	left: 50%;
 	top: 50%;
-	margin: -150px auto;
+	transform: translate(-50%, -50%);
 }
 
 #code_form {
