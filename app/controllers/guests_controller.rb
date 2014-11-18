@@ -47,6 +47,14 @@ def code_check
       end
 end
 
+def admin 
+  @guests = Guest.all
+  # @guests = []
+  # Guest.find_each do |guest|
+  #   @guests.push(guest)
+  # end
+end
+
  private
   def guest_params
     params.require(:guest).permit(:first_name, :last_name, :rsvp, :food)

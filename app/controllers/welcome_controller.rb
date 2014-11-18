@@ -13,6 +13,7 @@ class WelcomeController < ApplicationController
 
   def gallery
   end
+
   
 end
 

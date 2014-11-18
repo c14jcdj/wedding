@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
+  get "/guests/admin", :to => "guests#admin"
   resources :guests
   get "/welcome/about", :to => "welcome#about"
   get "/welcome/bridal_party", :to => "welcome#bridal_party"
