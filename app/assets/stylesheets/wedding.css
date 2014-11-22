@@ -537,14 +537,14 @@
 
 #enter_code, .created_outer {
 	width: 80%;
-	height: 350px;
+	height: 450px;
 	background-color: rgba(0,0,0, .5);
 	position: absolute;
 	top: 50%;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	margin: -175px auto 0;
+	margin: -225px auto 0;
 }
 
 #enter_code h1 {
@@ -558,6 +558,7 @@
     1px -1px 0 #fff,
     -1px 1px 0 #fff,
     1px 1px 0 #fff;  
+    margin-top: -125px;
 }
 
 #enter_code p {
@@ -909,7 +910,10 @@ border-right: 30px solid #202020;
 	display: none;
 }
 
-/*@media only screen and (min-width: 300px) and (max-width: 359px){*/
+
+#enter_code #rsvpTitle {
+	margin-top: -50px;
+}
 @media only screen and (min-width: 640px) and (max-width: 799px){
 	#title_landing {
 		font-size: 3em;
@@ -926,6 +930,13 @@ border-right: 30px solid #202020;
 
 	#landing ul li {
 		margin: 0 10px;
+	}
+
+	#enter_code #rsvpTitle {
+	margin-top: -100px;
+	}
+	.super {
+		display: none;
 	}
 }
 
@@ -951,7 +962,20 @@ border-right: 30px solid #202020;
 		margin: 0 4px;
 		font-size: 0.9em;
 	}
+
+	#enter_code #rsvpTitle {
+	margin-top: -100px;
+	}
+	.super, .secret {
+		display: none;
+	}
+
+	#enter_code {
+		width: 90%;
+	}
 }
+
+
 
 @media only screen and (max-width: 479px) {
 	#title_landing {
@@ -979,6 +1003,46 @@ border-right: 30px solid #202020;
 
 	#footer_mobile {
 		display: block;
+	}
+	#enter_code #rsvpTitle {
+	margin-top: -125px;
+	font-size: 1.7em;
+	}
+	.super, .secret {
+		display: none;
+	}
+
+	#enter_code {
+
+		width: 98%;
+	}
+
+	#enter_code p {
+		font-size: 1.5em;
+	}
+
+	.enter_code_tag {
+		width: 125px;
+	}
+
+	.code_submit {
+		width: 75px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	#title_landing {
+		font-size: 1.5em;
+		margin: -20px auto;
+	}
+
+	#date {
+		font-size: 1.5em;
+	}
+
+	.code_submit {
+		width: 65px;
+		margin-left: 5px;
 	}
 }
 
