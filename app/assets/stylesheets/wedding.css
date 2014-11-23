@@ -1104,7 +1104,7 @@ border-right: 30px solid #202020;
 		height: 100%;
 	}
 
-	#enter_code .form {
+	#enter_code .form,  {
 		background-color: rgba(255,255,255,0.5);
 		height:100%;
 	}
@@ -1143,6 +1143,39 @@ border-right: 30px solid #202020;
 
 	.wants {
 		display: none;
+	}
+
+	.created_outer {
+		background-color: none;
+		height: 100%;
+		width: 100%;
+		top:0;
+		margin: 0 auto;
+	}
+
+	.overview p {
+		margin-left: 10px;
+	}
+
+	.overview p:not(:first-child){
+		margin-left: 10px;
+	}
+
+	.overview {
+		font-size: 1.5em;
+	}
+
+	.overview a {
+		text-align: center;
+	}
+
+	.rsvp_link_mistake {
+		margin-left: 10px;
+	}
+
+	.overview a:not(.rsvp_link_mistake){
+		top: 50px;
+		margin-left: 10px;
 	}
 
 
