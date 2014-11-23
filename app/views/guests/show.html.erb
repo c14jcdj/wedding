@@ -16,7 +16,7 @@
 <p >
   <strong>Status:</strong>
   <% if @guest.rsvp == true %>
-    <strong>You are attending</strong>
+    <strong>Attending</strong>
     <% else %>
     <strong>We will miss you</strong>
   <% end %>
@@ -28,11 +28,11 @@
 <p >
   <strong>Food Choice:</strong>
   <% if @guest.food == 'beef' %>
-    <strong>You are eating beef</strong>
+    <strong><span class="wantsM">You are eating</span> beef</strong>
     <% elsif @guest.food == 'chicken' %>
-    <strong>You are eating chicken</strong>
+    <strong><span class="wantsM">You are eating</span>chicken</strong>
     <% elsif @guest.food == 'fish' %>
-    <strong>You are eating fish</strong>
+    <strong><span class="wantsM">You are eating</span>fish</strong>
     <% else %>
     <strong>Not Applicable</strong>
   <% end %>
@@ -41,34 +41,13 @@
   <% end %>
 
   <%= link_to 'Made a mistake?' , edit_guest_path(@guest), :class => 'rsvp_link_mistake' %>
-  <br class="br">
+  <br >
   <%= link_to '<span class="mickeyUi" style="float:none;">&#x00AA</span> Lock Me In!'.html_safe, controller: 'welcome', action: 'index' %>
     </div>
   </div>
 </div>
 
-<footer id="landingmobile">
-  <div class='mickeyUi' 
-  style="text-shadow: -5px -1px 5px #eee, 5px -1px 5px #eee, -5px 1px 5px #eee, 5px 1px 5px #eee;
-       font-size:6em;
-       margin-top: -40px;
-       margin-left: 50%;
-       transform: translateX(-50%);
-       display:inline-block;
-   " >&#x00AA;
-  </div>
-  <div style="
-        position:absolute;
-        left:0;
-        right:0;
-        font-size: 2em;
-        color:white;
-        text-align:center;
-        line-height: 42px;
-        text-shadow: 0px 0px 2px black;
-  "><%= link_to 'Home', controller: 'welcome', action: 'index' %></div>
 
-</footer>
 
 <footer id='landing'>
   <ul>

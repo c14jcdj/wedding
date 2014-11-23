@@ -10,8 +10,14 @@
     <%= form_for @guest do |f| %>
   <p>
     <%= f.label :first_name %>
+  <br >
+
     <%= f.text_field :first_name , :class => 'name_txt_fields' %>
+  <br >
+
     <%= f.label :last_name %>
+  <br >
+
     <%= f.text_field :last_name, :class => 'name_txt_fields'  %>
   </p>
 
@@ -19,18 +25,21 @@
 
     <%= f.radio_button(:rsvp, true, {:class => 'rsvp_edit_yes'}) %>
   <%= label_tag(:rsvp_yes, "I will be attending!") %>
+  <br class="br2">
   <%= f.radio_button(:rsvp, false, {:class => 'rsvp_edit_nay'}) %>
   <%= label_tag(:rsvp_no, "Sorry. I can't make it.") %>
   </p>
  
  <% dis = @guest.rsvp == true ? 'block' : 'none' %>
+          <h2 class="food_choices" style="font-family: Waltograph; border-bottom: 1px solid black; width: 150px; margin:0 auto;">Food Choices</h2>
+
   <p id='edit_food' style="display: <%= dis %>; height: 40px; line-height: 45px;">
   <%= f.radio_button(:food, "beef") %>
-  <%= label_tag(:foo_beef, "I want beef") %>
+  <%= label_tag(:foo_beef, "<span class='wants'>I want </span>Beef".html_safe) %>
   <%= f.radio_button(:food, "chicken") %>
-  <%= label_tag(:food_chicken, "I want chicken") %>
+  <%= label_tag(:food_chicken, "<span class='wants'>I want </span>Chicken".html_safe) %>
   <%= f.radio_button(:food, "fish") %>
-  <%= label_tag(:food_fish, "I want fish") %>
+  <%= label_tag(:food_fish, "<span class='wants'>I want </span>Fish".html_safe) %>
   </p>
   <p>
     <%= f.submit ' Update RSVP', :class => 'rsvp_update' %>
