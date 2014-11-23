@@ -27,7 +27,7 @@
 				  <p>
 				    <%= f.label :first_name %>
 				    <%= f.text_field :first_name , :class => 'name_txt_fields' %>
-				 
+				    <br>
 				    <%= f.label :last_name %>
 				    <%= f.text_field :last_name , :class => 'name_txt_fields' %>
 				  </p>
@@ -35,19 +35,25 @@
 				  <p>
 				  	<%= f.radio_button(:rsvp, true, {:class => "rsvp_yes"}) %>
 					<%= label_tag(:rsvp_yes, "I will be attending!") %>
+					<br class="br">
 					<%= f.radio_button(:rsvp, false, {:class => "rsvp_no"}) %>
 					<%= label_tag(:rsvp_no, "Sorry. I can't make it.") %>
 				  </p>
 
-
-				 <p id='form_food' style='height: 40px; line-height: 45px;'>
+				  <div id="form_food">
+				  <h2 class="food_choices" style="font-family: Waltograph; border-bottom: 1px solid black; width: 150px; margin:0 auto;">Food Choices</h2>
+				 <p  style='height: 40px; line-height: 45px;'>
 					<%= f.radio_button(:food, "beef") %>
-					<%= label_tag(:foo_beef, "I want beef") %>
+					<%= f.label :foo_beef, "<span class='wants'>I want </span>Beef".html_safe %>
+					<%#= label_tag(:foo_beef, "<span>I want beef") %>
 					<%= f.radio_button(:food, "chicken") %>
-					<%= label_tag(:food_chicken, "I want chicken") %>
+					<%= f.label :food_chicken, "<span class='wants'>I want </span>Chicken".html_safe %>
+					<%#= label_tag(:food_chicken, "I want chicken") %>
 					<%= f.radio_button(:food, "fish") %>
-					<%= label_tag(:food_fish, "I want fish") %>
+					<%= f.label :foo_fish, "<span class='wants'>I want </span>Fish".html_safe %>
+					<%#= label_tag(:food_fish, "I want fish") %>
 				  </p>
+				  </div>
 
 				  <p>
 				    <%= f.submit 'RSVP', :class => 'rsvp_submit' %>
@@ -73,7 +79,6 @@
 		   display:inline-block;
 	 " >&#x00AA;
 	</div>
-	<a href="">
 	<div style="
 				position:absolute;
 				left:0;
@@ -83,8 +88,7 @@
 				text-align:center;
 				line-height: 42px;
 				text-shadow: 0px 0px 2px black;
-	">Home</div>
-	</a>
+	"><%= link_to 'Home', controller: 'welcome', action: 'index' %></div>
 
 </footer>
 

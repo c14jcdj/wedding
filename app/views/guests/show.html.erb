@@ -1,9 +1,6 @@
 <div class="bg_rsvp"></div>
 
-<!-- <div class="rsvp_home_link">
-<%= link_to 'home', controller: 'welcome', action: 'index' %>
-</div>
- -->
+
 <div class='created_outer'>
   <div class="created_inner">
     <div class="overview">
@@ -11,12 +8,12 @@
   <strong>first name:</strong>
   <%= @guest.first_name %>
 </p>
-<p class="names" style="margin-top: -10px;">
+<p class="names" >
   <strong>last name:</strong>
   <%= @guest.last_name %>
 </p>
 
-<p style="margin-top: -10px;">
+<p >
   <strong>Status:</strong>
   <% if @guest.rsvp == true %>
     <strong>You are attending</strong>

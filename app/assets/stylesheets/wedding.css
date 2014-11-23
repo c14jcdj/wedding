@@ -536,7 +536,7 @@
 }
 
 #enter_code, .created_outer {
-	width: 80%;
+	width: 85%;
 	height: 450px;
 	background-color: rgba(0,0,0, .5);
 	position: absolute;
@@ -672,13 +672,14 @@
 
 .overview a {
 	text-decoration: none;
+	position: relative;
+	top:20px;
 }
 
 .overview a:not(.rsvp_link_mistake){
 	color: white;
 	border: 1px solid black;
 	padding: 10px;
-	padding-top: 20px;
 	background-color: rgba(0,0,0, .7);
 	text-shadow: 2px 2px #000;
 
@@ -690,10 +691,8 @@
 	color: white;
 	margin-right: 20px;
 	text-shadow: 2px 2px red;
-
 	border: 1px solid black;
 	padding: 10px;
-	padding-top: 20px;
 }
 
 #edit_food {
@@ -914,6 +913,36 @@ border-right: 30px solid #202020;
 #enter_code #rsvpTitle {
 	margin-top: -50px;
 }
+
+.br {
+		display: none;
+	}
+
+#landingmobile {
+	display: none;
+}
+
+.food_choices {
+	display: none;
+}
+
+#landingmobile a {
+	text-decoration: none;
+	color:white;
+}
+
+.overview p:not(:first-child){
+	margin: 15px auto;
+}
+
+.overview p:nth-child(2){
+	margin-top: -25px;
+}
+
+
+
+
+
 @media only screen and (min-width: 640px) and (max-width: 799px){
 	#title_landing {
 		font-size: 3em;
@@ -938,6 +967,19 @@ border-right: 30px solid #202020;
 	.super {
 		display: none;
 	}
+
+	.br {
+		display: block;
+	}
+
+	#form_rsvp form {
+		margin-top: -60px;
+	}
+	#form_rsvp {
+		width: 95%;
+	}
+
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 639px){
@@ -971,8 +1013,47 @@ border-right: 30px solid #202020;
 	}
 
 	#enter_code {
+		width: 95%;
+	}
+
+	.br {
+		display: block;
+	}
+
+	#form_rsvp form {
+		margin-top: -60px;
+	}
+
+	#form_rsvp {
+		width: 100%;
+	}
+
+	.overview {
+		left: 10px;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 540px){
+	#enter_code {
+		width: 100%;
+	}
+
+	#enter_code p {
+		font-size: 1.8em;
+	}
+
+	.overview a,.overview a:not(.rsvp_link_mistake) {
+		padding: 5px;
+	}
+
+	.rsvp_link_mistake {
+		margin-right: 5px;
+	}
+
+	.created_outer {
 		width: 90%;
 	}
+
 }
 
 
@@ -1043,6 +1124,27 @@ border-right: 30px solid #202020;
 	#form_error h1 {
 		margin-top: -275px;
 	}
+
+	#landingmobile {
+		display: block;
+	}
+
+	.br, .food_choices {
+		display: block;
+	}
+
+	#form_rsvp form {
+		margin-top: -60px;
+	}
+
+	#form_rsvp, .created_outer {
+		width: 100%;
+	}
+
+	.wants {
+		display: none;
+	}
+
 
 }
 
