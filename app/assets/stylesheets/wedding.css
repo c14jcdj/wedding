@@ -949,6 +949,18 @@ border-right: 30px solid #202020;
 }
 
 
+@media only screen and (max-width: 1160px) {
+
+	.groomsmen , .bridal_party {
+		float: none;
+		margin: 0 auto;
+	}
+
+	.wpContainers {
+		left: 50%;
+		margin-left: -285px;
+	}
+}
 
 
 
@@ -1205,7 +1217,7 @@ border-right: 30px solid #202020;
 	}
 
 	#form_rsvp form {
-		margin-top: -60px;
+		margin-top: 0px;
 	}
 
 	#form_rsvp, .created_outer {
@@ -1233,7 +1245,7 @@ border-right: 30px solid #202020;
 	}
 
 	.overview {
-		font-size: 1.5em;
+		font-size: 1.8em;
 	}
 
 	.overview a {
