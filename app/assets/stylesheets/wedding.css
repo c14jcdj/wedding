@@ -1105,6 +1105,24 @@ border-right: 30px solid #202020;
 		background-size: cover;
 	}
 
+	.bridal_party, .groomsmen {
+		width: 100%;
+		border: 4px solid green;
+	}
+
+	.wpContainers {
+		width: 411px;
+		margin-left: -200px;
+	}
+
+	.info_container {
+		width: 50%;
+	}
+
+	.favorite {
+		display: none;
+	}
+
 	
 }
 
@@ -1299,6 +1317,22 @@ border-right: 30px solid #202020;
 		background-size: cover;
 	}
 
+	.wpContainers {
+		width: 411px;
+		margin-left: -200px;
+	}
+
+	.info_container {
+		width: 55%;
+	}
+
+	.favorite {
+		display: none;
+	}
+
+	#wedding_party h1 {
+		font-size: 3.5em;
+	}
 
 
 }
