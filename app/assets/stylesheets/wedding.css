@@ -1306,6 +1306,7 @@ border-right: 30px solid #202020;
 	#edit_rsvp_form {
 		width: 100%;
 		top:10%;
+		font-size: .8em;
 	}
 
 	#edit_rsvp h1 {

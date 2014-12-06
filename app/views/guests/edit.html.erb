@@ -1,6 +1,6 @@
-<div id="edit_rsvp">
+<!-- <div id="edit_rsvp">
   <h1>Edit RSVP</h1>
-</div>
+</div> -->
 <div class="bg_rsvp"></div>
 
 
@@ -42,7 +42,7 @@
   <%#= label_tag(:food_fish, "<span class='wants'>I want </span>Fish".html_safe) %>
   </p>
   <p>
-    <%= f.submit ' Update RSVP', :class => 'rsvp_update' %>
+    <%= f.submit 'RSVP', :class => 'rsvp_update' %>
     
   </p>
 <% end %>
@@ -58,6 +58,13 @@
 $(".rsvp_edit_nay").on("change", function(){
   $('#edit_food').css('display', 'none')
 });
+
+function bgOverlay() {
+    var height = $(document).height()
+    $('#bg_rsvp').css('height', height)   
+  }
+  window.addEventListener("load", bgOverlay, false);
+  window.addEventListener("resize", bgOverlay, false);
 
 
 </script>
