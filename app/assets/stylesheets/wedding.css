@@ -10,7 +10,9 @@
     position:absolute; 
     top:40%; 
     left: 50%; 
-    transform:translate(-40%, -50%);
+    -ms-transform: translate(-40%, -50%); /* IE 9 */
+    -webkit-transform: translate(-40%, -50%); /* Chrome, Safari, Opera */
+    transform: translate(-40%, -50%);
 }
 
 #form_rsvp, #form_error, #form_food {
