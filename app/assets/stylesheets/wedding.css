@@ -1346,6 +1346,17 @@ border-right: 30px solid #202020;
 		font-size: 3.5em;
 	}
 
+	.name_txt_fields {
+	height: 25px;
+	line-height: 25px;
+	font-size: .6em;
+	width: 250px;
+	}
+
+	.rsvp_update {
+		margin-top: -10px;
+	}
+
 
 }
 
