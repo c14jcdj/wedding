@@ -1,6 +1,6 @@
 <div class="bg_rsvp"></div>
 
-
+<div id="show_con">
 <div class='created_outer'>
   <div class="created_inner">
     <div class="overview">
@@ -48,7 +48,11 @@
     </div>
   </div>
 </div>
+</div>
 
+<div class="wrongway" >
+  <p>Turn your phone the other way to continue</p>
+</div>
 
 
 <footer id='landing'>
@@ -61,4 +65,25 @@
   </ul>
 </footer>
 
+<script type="text/javascript">
+function errorMsg(){
+  if($(window).height() < 350){
+    $('#show_con').css('display', 'none')
+    $('.wrongway').css('display', 'block')
+  } else {
+    $('#show_con').css('display', 'block')
+    $('.wrongway').css('display', 'none')
+  }
+}
+
+function bgOverlay() {
+    var height = $(document).height()
+    $('#bg_rsvp').css('height', height)   
+  }
+
+  window.addEventListener("load", bgOverlay, false);
+  window.addEventListener("resize", bgOverlay, false);
+  window.addEventListener("load", errorMsg, false);
+  window.addEventListener("resize", errorMsg, false);
+</script>
 

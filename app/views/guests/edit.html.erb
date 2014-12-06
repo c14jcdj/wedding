@@ -3,7 +3,7 @@
 </div> -->
 <div class="bg_rsvp"></div>
 
-
+<div id="edit_con">
 <div class="created_outer">
   <div class="created_inner">
     <div id="edit_rsvp_form">
@@ -49,6 +49,11 @@
   </div>
   </div>
 </div>
+</div>
+
+<div class="wrongway" >
+  <p>Turn your phone the other way to continue</p>
+</div>
 
 <script type="text/javascript">
   $(".rsvp_edit_yes").on("change", function(){
@@ -59,12 +64,24 @@ $(".rsvp_edit_nay").on("change", function(){
   $('#edit_food').css('display', 'none')
 });
 
+function errorMsg(){
+  if($(window).height() < 350){
+    $('#edit_con').css('display', 'none')
+    $('.wrongway').css('display', 'block')
+  } else {
+    $('#edit_con').css('display', 'block')
+    $('.wrongway').css('display', 'none')
+  }
+}
+
 function bgOverlay() {
     var height = $(document).height()
     $('#bg_rsvp').css('height', height)   
   }
   window.addEventListener("load", bgOverlay, false);
   window.addEventListener("resize", bgOverlay, false);
+  window.addEventListener("load", errorMsg, false);
+  window.addEventListener("resize", errorMsg, false);
 
 
 </script>

@@ -64,6 +64,13 @@
 
 </div>
 
+<div class="wrongway" style="color: black; text-shadow:-1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; font-size: 2em;  text-align:center; position:absolute; top:40%; left: 50%; transform:translate(-40%, -50%);">
+	<p>Turn your phone the other way to continue</p>
+</div>
+
 <footer id="landingmobile">
 	<div class='mickeyUi' 
 	style="text-shadow: -5px -1px 5px #eee, 5px -1px 5px #eee, -5px 1px 5px #eee, 5px 1px 5px #eee;
@@ -112,6 +119,17 @@
   		$('#form_food').css('display', 'none')
 	});
 
+function errorMsg(){
+	if($(window).height() < 350){
+		$('#enter_code').css('display', 'none')
+		$('.wrongway').css('display', 'block')
+	} else {
+		$('#enter_code').css('display', 'block')
+		$('.wrongway').css('display', 'none')
+	}
+}
+	
+
 
 function bgOverlay() {
 	 	var height = $(document).height()
@@ -119,6 +137,8 @@ function bgOverlay() {
 	}
 	window.addEventListener("load", bgOverlay, false);
 	window.addEventListener("resize", bgOverlay, false);
+	window.addEventListener("load", errorMsg, false);
+	window.addEventListener("resize", errorMsg, false);
 </script>
 
 <%= javascript_include_tag "wedding" %>
