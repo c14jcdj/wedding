@@ -4,14 +4,18 @@
 <div class='created_outer'>
   <div class="created_inner">
     <div class="overview">
-    <p class="names">
+      <p class="names">
+        <strong>Name:</strong>
+          <%= @guest.first_name%> <%= @guest.last_name %>
+      </p>
+    <!-- <p class="names">
   <strong>first name:</strong>
   <%= @guest.first_name %>
 </p>
 <p class="names" >
   <strong>last name:</strong>
   <%= @guest.last_name %>
-</p>
+</p> -->
 
 <p >
   <strong>Status:</strong>
@@ -26,11 +30,11 @@
 
 
 <p >
-  <strong>Food<span class="colonMobile">:</span><span class="choiceM">Choice:</span> </strong>
+  <strong>Food<span class="colonMobile">:</span><span class="choiceM"> Choice:</span> </strong>
   <% if @guest.food == 'vegetarian' %>
     <strong><span class="wantsM">You are eating</span> vegetarian</strong>
     <% elsif @guest.food == 'meat' %>
-    <strong><span class="wantsM">You are eating</span>meat</strong>
+    <strong><span class="wantsM">You are eating</span> meat</strong>
     <% else %>
     <strong>Not Applicable</strong>
   <% end %>
