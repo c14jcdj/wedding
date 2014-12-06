@@ -109,12 +109,22 @@
 	    }, 1000);
 	}
 
+	function hideCounter(){
+	if($(window).height() < 500){
+		$('#countdown').css('display', 'none')
+	} else {
+		$('#countdown').css('display', 'block')
+	}
+}
+
 	function bgOverlay() {
 	 	var height = $(document).height()
 	 	$('#bg_landing').css('height', height)   
 	}
 	window.addEventListener("load", bgOverlay, false);
 	window.addEventListener("resize", bgOverlay, false);
+	window.addEventListener("load", hideCounter, false);
+	window.addEventListener("resize", hideCounter, false);
 
 	countdown()
 </script>
