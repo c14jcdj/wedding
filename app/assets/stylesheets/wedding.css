@@ -1303,15 +1303,14 @@ border-right: 30px solid #202020;
 	.created_outer {
 		width: 100%;
 	}
+	.created_inner {
+		width: 95%;
+	}
 	#edit_rsvp_form {
 		width: 100%;
 		top:10%;
 		font-size: .8em;
-		margin: -75px auto 0;
-	}
-
-	#edit_rsvp_form p:first-child {
-		margin-top: 35px;
+		margin: -65px auto 0;
 	}
 
 	#edit_rsvp h1 {
