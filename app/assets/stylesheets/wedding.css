@@ -955,6 +955,10 @@ border-right: 30px solid #202020;
 	display: none;
 }
 
+.colonMobile {
+	display: none;
+}
+
 
 @media only screen and (max-width: 1160px) {
 
@@ -1206,7 +1210,12 @@ border-right: 30px solid #202020;
 	.super, .secret {
 		display: none;
 	}
-
+	.wantsM, .choiceM {
+		display: none;
+	}
+	.colonMobile {
+		display: inline-block;
+	}
 
 
 	#enter_code {
