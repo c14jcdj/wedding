@@ -27,12 +27,10 @@
 
 <p >
   <strong>Food Choice:</strong>
-  <% if @guest.food == 'beef' %>
-    <strong><span class="wantsM">You are eating</span> beef</strong>
-    <% elsif @guest.food == 'chicken' %>
-    <strong><span class="wantsM">You are eating</span>chicken</strong>
-    <% elsif @guest.food == 'fish' %>
-    <strong><span class="wantsM">You are eating</span>fish</strong>
+  <% if @guest.food == 'vegetarian' %>
+    <strong><span class="wantsM">You are eating</span> vegetarian</strong>
+    <% elsif @guest.food == 'meat' %>
+    <strong><span class="wantsM">You are eating</span>meat</strong>
     <% else %>
     <strong>Not Applicable</strong>
   <% end %>

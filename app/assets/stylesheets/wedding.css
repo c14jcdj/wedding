@@ -1096,7 +1096,9 @@ border-right: 30px solid #202020;
 	display: none;
 	}
 	.about_content_con {
-		width: 100%;
+		width: 99.5%;
+		right:0px;
+		left:0px;
 	}
 
 	

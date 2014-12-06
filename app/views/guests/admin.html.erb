@@ -16,12 +16,10 @@
     	<% else %>
     	<td>No</td>
     <% end %>
-    <% if guest.food == 'beef' %>
-    	<td>Beef</td>
-    	<% elsif guest.food == 'chicken' %>
-      <td>Chicken</td>
-      <% elsif guest.food == 'fish' %>
-    	<td>Fish</td>
+    <% if guest.food == 'meat' %>
+    	<td>Meat</td>
+    	<% elsif guest.food == 'vegetarian' %>
+      <td>Vegetarian</td>
     	<% else  %>
     	<td>NA</td>
     <% end %>
