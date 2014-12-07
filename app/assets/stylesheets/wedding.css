@@ -15,6 +15,31 @@
     transform: translate(-40%, -50%);
 }
 
+.spacer {
+	width: 100px;
+	display: none;	
+}
+
+.circle_text h2:nth-child(2){
+	margin-top: 125px;
+	font-family: cursive;
+}
+
+.circle_text h2:first-child{
+	left: 0;
+}
+
+
+.and {
+	font-family: cursive; 
+	font-weight: bolder; 
+	font-size: 3em; 
+	position: absolute; 
+	left:0; 
+	right:0; 
+	top: 115px;
+}
+
 .wedding_party_h1_con {
 	background-color: white; 
 	width: 100%; 
@@ -747,17 +772,20 @@
 	border-radius: 600px;
 	background-color: rgba(255,255,255,.8);
 	position: absolute;
-	left: 0;
-	right: 0;
 	top: 50%;
-	margin: -300px auto 0;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%); 
+    -webkit-transform: translate(-50%, -50%); 
+	transform: translate(-50%, -50%);
 }
 
 .circle_container {
 	position: absolute; 
 	width: 1150px;
 	left: 50%;
-	margin-left: -575px;
+	-ms-transform: translateX(-50%); 
+    -webkit-transform: translateX(-50%); 
+	transform: translateX(-50%);
 	top: 150px;
 }
 
@@ -992,11 +1020,87 @@ border-right: 30px solid #202020;
 		left: 50%;
 		margin-left: -285px;
 	}
+
+	.circle{
+		width: 450px;
+		height: 450px;
+	} 
+
+	.circle2 {
+		width: 400px;
+		height: 400px;
+	}
+
+	.circle2, .circle {
+		top:50%;
+	}
+
+	.circle_container {
+		width: 800px;
+	}
+
+	.circle_text h2 {
+		margin-top: 25px;
+	}
+
+	.circle_text {
+		font-size: .9em;
+	}
+
+	.and {
+		top: 100px;
+	}
+
+	.wedding_details {
+		display: none;
+	}
+
+	.circle_text h2:nth-child(2){
+		margin-top: 10px;
+	}
+
+	.promptly {
+		display: none;
+	}
 }
 
 
 
 @media only screen and (min-width: 640px) and (max-width: 799px){
+	.circle_container {
+		width:100%;
+	}
+
+	.circle_container .circle:nth-child(2){
+		left:50%;
+		top:375px;
+	}
+
+	.circle {
+		left: 50%;
+		-ms-transform: translateX( -50%); /* IE 9 */
+    	-webkit-transform: translateX( -50%); /* Chrome, Safari, Opera */
+    	transform: translateX( -50%);
+
+	}
+	.circle_text {
+		font-size: .8em;
+	}
+
+	.circle_text h2:nth-child(2){
+		margin-top: 25px;
+	}
+
+	.circle_container {
+		top: 75px;
+	}
+
+	.spacer {
+		display: block;
+		height: 500px;
+	}
+
+
 	#title_landing {
 		font-size: 3em;
 		margin: 0 auto;
@@ -1055,6 +1159,34 @@ border-right: 30px solid #202020;
 }
 
 @media only screen and (min-width: 480px) and (max-width: 639px){
+	.circle_container .circle:nth-child(2){
+		left:50%;
+		top:375px;
+	}
+
+	.circle {
+		left: 50%;
+		-ms-transform: translateX( -50%); /* IE 9 */
+    	-webkit-transform: translateX( -50%); /* Chrome, Safari, Opera */
+    	transform: translateX( -50%);
+
+	}
+	.circle_text {
+		font-size: .8em;
+	}
+
+	.circle_text h2:nth-child(2){
+		margin-top: 25px;
+	}
+
+	.circle_container {
+		top: 75px;
+	}
+
+	.spacer {
+		display: block;
+		height: 500px;
+	}
 	#title_landing {
 		font-size: 2.8em;
 		margin: 0 auto;
@@ -1195,6 +1327,47 @@ border-right: 30px solid #202020;
 
 
 @media only screen and (max-width: 479px) {
+	.circle{
+		width: 425px;
+		height: 425px;
+	} 
+
+	.circle2 {
+		width: 375px;
+		height: 375px;
+	}
+
+	.circle_container {
+		width: 100%
+	}
+	.circle_container .circle:nth-child(2){
+		left:50%;
+		top:375px;
+	}
+
+	.circle {
+		left: 50%;
+		-ms-transform: translateX( -50%); /* IE 9 */
+    	-webkit-transform: translateX( -50%); /* Chrome, Safari, Opera */
+    	transform: translateX( -50%);
+
+	}
+	.circle_text {
+		font-size: .8em;
+	}
+
+	.circle_text h2:nth-child(2){
+		margin-top: 25px;
+	}
+
+	.circle_container {
+		top: 25px;
+	}
+
+	.spacer {
+		display: block;
+		height: 500px;
+	}
 	#title_landing {
 		font-size: 2em;
 	}
@@ -1387,6 +1560,47 @@ border-right: 30px solid #202020;
 }
 
 @media only screen and (max-width: 400px) {
+	.circle{
+		width: 315px;
+		height: 315px;
+	} 
+
+	.circle2 {
+		width: 290px;
+		height: 290px;
+	}
+
+	.circle_container {
+		width: 100%
+	}
+	.circle_container .circle:nth-child(2){
+		left:50%;
+		top:290px;
+	}
+
+	.circle {
+		left: 50%;
+		-ms-transform: translateX( -50%); /* IE 9 */
+    	-webkit-transform: translateX( -50%); /* Chrome, Safari, Opera */
+    	transform: translateX( -50%);
+
+	}
+	.circle_text {
+		font-size: .6em;
+	}
+
+	.circle_text h2:nth-child(2){
+		margin-top: 25px;
+	}
+
+	.circle_container {
+		top: 25px;
+	}
+
+	.spacer {
+		display: block;
+		height: 400px;
+	}
 	#title_landing {
 		font-size: 1.5em;
 		margin: -20px auto;
