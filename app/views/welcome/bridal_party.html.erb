@@ -266,6 +266,7 @@
 	    // 	window.addEventListener("resize", bgOverlay, false);
 
 	appendWeddingPartyContainers()
+
 	 $('.flip')
 	 .mouseenter(function(){
 	    $(this).find('.card').addClass('flipped')
@@ -278,5 +279,16 @@
             $(this).find('.card').removeClass('flipped');
         });
 
+	 $('.flip').click(function(){
+	 	if($(this).find('.card').hasClass('flipped')){
+	 		$(this).find('.card').removeClass('flipped');
+	 	} else {
+	 		$(this).find('.card').addClass('flipped')
+	        $(this).siblings('.style_declarations').css({
+	        	'border-top': '30px solid transparent',
+	        	'border-left': '30px solid transparent'
+	        })
+	 	}
+	 })
 
 </script>
