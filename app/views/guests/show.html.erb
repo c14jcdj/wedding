@@ -80,7 +80,7 @@ function bgOverlay() {
     var height = $(document).height()
     $('#bg_rsvp').css('height', height)   
   }
-
+  bgOverlay()
   window.addEventListener("load", bgOverlay, false);
   window.addEventListener("resize", bgOverlay, false);
   window.addEventListener("load", errorMsg, false);

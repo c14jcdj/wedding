@@ -1327,6 +1327,15 @@ border-right: 30px solid #202020;
 
 
 @media only screen and (max-width: 479px) {
+
+	#gallery_title h1 {
+		font-size: 3.5em;
+		margin: 0;
+
+	}
+	#countdown {
+		display: none;
+	}
 	.circle{
 		width: 425px;
 		height: 425px;
@@ -1383,9 +1392,7 @@ border-right: 30px solid #202020;
 	#date h2 {
 		line-height: 10px;
 	}
-	#countdown {
-		display: none;
-	}
+	
 
 	#landing {
 		display: none;
@@ -1565,6 +1572,10 @@ border-right: 30px solid #202020;
 		height: 315px;
 	} 
 
+	.and {
+		top: 65px;
+	}
+
 	.circle2 {
 		width: 290px;
 		height: 290px;
@@ -1587,6 +1598,10 @@ border-right: 30px solid #202020;
 	}
 	.circle_text {
 		font-size: .6em;
+	}
+
+	.circle_text h5 {
+		margin-top:	-10px; 
 	}
 
 	.circle_text h2:nth-child(2){
