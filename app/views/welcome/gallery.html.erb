@@ -325,10 +325,20 @@
     </div>
     <!-- Jssor Slider End -->
 <script type="text/javascript">
+    function hideTitle(){
+        if($(window).height() < 400  && $(window).width() < 600){
+        $('#gallery_title').css('display', 'none')
+        } else {
+        $('#gallery_title').css('display', 'block')
+        }
+    }
 	function bgOverlay() {
 	 	var height = $(document).height()
 	 	$('#bg_gallery').css('height', height)   
 	}
+    hideTitle()
 	window.addEventListener("load", bgOverlay, false);
-	window.addEventListener("resize", bgOverlay, false);
+    window.addEventListener("resize", bgOverlay, false);
+    window.addEventListener("load", hideTitle, false);
+	window.addEventListener("resize", hideTitle, false);
 </script>
