@@ -22,7 +22,7 @@
   <% if @guest.rsvp == true %>
     <strong>Attending</strong>
     <% else %>
-    <strong>We will miss you</strong>
+    <strong>Can't make it</strong>
   <% end %>
 </p>
 
@@ -54,6 +54,16 @@
   <p>Turn your phone the other way to continue</p>
 </div>
 
+<div class="confirmed">
+  <p>Your RSVP has been confirmed.<br>
+    <% if @guest.rsvp == true %>
+    <strong>See you there!</strong>
+    <% else %>
+    <strong>We will miss you!</strong>
+  <% end %>
+  </p>
+</div>
+
 
 <footer id='landing'>
   <ul>
@@ -80,6 +90,28 @@ function bgOverlay() {
     var height = $(document).height()
     $('#bg_rsvp').css('height', height)   
   }
+
+  function delay (URL) {
+    // setTimeout( function() { window.location = URL }, 500 );
+    $("a").click(function(evt){
+        var link = $(this).attr("href");
+        setTimeout(function() {
+            window.location.href = link;
+        }, 500);
+    });
+}
+
+  function confirmRsvp(){
+    $('.overview a:not(.rsvp_link_mistake)').on('click', function(e){
+      e.preventDefault()
+      $('.confirmed').css('display', 'block')
+      var link = $(this).attr("href");
+        setTimeout(function() {
+            window.location.href = link;
+        }, 3000);
+    })
+  }
+  confirmRsvp()
   bgOverlay()
   window.addEventListener("load", bgOverlay, false);
   window.addEventListener("resize", bgOverlay, false);

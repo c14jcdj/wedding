@@ -342,6 +342,28 @@
 	position: relative;
 }
 
+.confirmed {
+	display: none;
+	background-color: rgba(0,0,0,0.9);
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.confirmed p {
+	position: absolute;
+	left: 50%;
+	top:50%;
+	-ms-transform: translate(-50%, -50%); 
+    -webkit-transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
+
+}
 
 
 #landing_box {
@@ -368,7 +390,7 @@
 	color: rgba(0,0,0,0.9);
 	/*text-shadow: 2px 2px #fff;*/
 	text-shadow:
-    -5px -5px 0 #fff,
+    -2px -2px 0 #fff,
     1px -1px 0 #fff,
     -2px 1px 0 #fff,
     1px 1px 0 #fff;  
