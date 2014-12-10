@@ -42,6 +42,9 @@ def create
         render 'edit'
         return
       end
+      if(guest_params['rsvp'] == 'false')
+        @guest.food == 'NA'
+      end
     redirect_to @guest
   else
     render 'edit'
