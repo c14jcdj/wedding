@@ -26,7 +26,6 @@ $( "#code_form" ).on( "submit", function( event ) {
 });
 
 
-
 $(".rsvp_yes").on("change", function(){
   $('#form_food').css('display', 'block')
 });

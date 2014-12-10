@@ -1,3 +1,7 @@
+#form_food2 {
+	display: none;
+}
+
 .wrongway {
 	display: none;
 	color: black; 
@@ -343,7 +347,7 @@
 }
 
 .confirmed {
-	display: none;
+	display: none;	
 	background-color: rgba(0,0,0,0.9);
 	color: white;
 	font-size: 2em;

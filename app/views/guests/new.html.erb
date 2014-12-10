@@ -1,5 +1,11 @@
 <div class="bg_rsvp"></div>
 
+<div id="error_box" style="text-align:center; color: red;">
+	<% if @errors %>
+	<h1>You Must Choose a Food</h1>
+	<% end %>
+</div>
+
 <div id="enter_code">
 
 	<div class="form">
@@ -39,6 +45,18 @@
 				  </p>
 
 				  <div id="form_food">
+				  <h2 class="food_choices" style="font-family: Waltograph; border-bottom: 1px solid black; width: 150px; margin:0 auto;">Food Choices</h2>
+				 <p  style='height: 40px; line-height: 45px;'>
+					<%= f.radio_button(:food, "vegetarian") %>
+					<%= f.label :foo_veg, "<span class='wants'>I want </span>Vegetarian".html_safe %>
+					<%= f.radio_button(:food, "meat") %>
+					<%= f.label :food_meat, "<span class='wants'>I want </span>Meat".html_safe %>
+					<%#= f.radio_button(:food, "fish") %>
+					<%#= f.label :foo_fish, "<span class='wants'>I want </span>Fish".html_safe %>
+				  </p>
+				  </div>
+
+				  <div id="form_food2">
 				  <h2 class="food_choices" style="font-family: Waltograph; border-bottom: 1px solid black; width: 150px; margin:0 auto;">Food Choices</h2>
 				 <p  style='height: 40px; line-height: 45px;'>
 					<%= f.radio_button(:food, "vegetarian") %>
@@ -107,6 +125,17 @@
 </footer>
 
 <script type="text/javascript">
+
+	
+	if ($.trim($('#error_box').html())){
+			  		$('#code_form').css('display', 'none')
+			  		$('#form_error').css('display', 'none')
+		            $('.form h1').css('display', 'none')
+			  		$('#form_rsvp').css('display', 'block')
+
+
+	}
+
 	$(".rsvp_yes").on("change", function(){
   		$('#form_food').css('display', 'block')
   		$('#landingmobile').css('display', 'none')

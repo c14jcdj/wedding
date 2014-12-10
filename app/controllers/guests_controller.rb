@@ -7,8 +7,15 @@ def new
 end
 
 def create
-	@guest = Guest.new(guest_params)
- 
+  @guest = Guest.new(guest_params)
+  if (guest_params['rsvp'] == 'false') 
+    @guest.food = 'NA'
+  end
+  unless (@guest.valid?)
+    @errors = @guest.errors.messages
+    render 'new'
+    return
+  end
   @guest.save
   redirect_to @guest
  end
@@ -30,6 +37,11 @@ def create
  	@guest = Guest.find(params[:id])
  
   if @guest.update(guest_params)
+      if(@guest.food == 'NA')
+        @errors = 'You need to Enter a Food Choice'
+        render 'edit'
+        return
+      end
     redirect_to @guest
   else
     render 'edit'
