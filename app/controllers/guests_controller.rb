@@ -37,8 +37,8 @@ def create
  	@guest = Guest.find(params[:id])
  
   if @guest.update(guest_params)
-      if(@guest.food == 'NA')
-        @errors = 'You need to Enter a Food Choice'
+      if(@guest.food == 'NA' && guest_params['rsvp'] == 'true')
+        @errors = [[:food, ['x']]]
         render 'edit'
         return
       end
@@ -47,6 +47,8 @@ def create
       end
     redirect_to @guest
   else
+    @errors = @guest.errors.messages 
+    @errors[:food] = 'x'
     render 'edit'
   end
  end

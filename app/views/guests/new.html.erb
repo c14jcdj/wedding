@@ -2,7 +2,19 @@
 
 <div id="error_box" style="text-align:center; color: red;">
 	<% if @errors %>
-	<h1>You Must Choose a Food</h1>
+	<% @errors.each do |x| %>
+	<% x.each do |y, z| %>
+		<% if y == :food %>
+		<h1>You Must Choose a Food</h1>
+		<% end %>
+		<% if y == :first_name %>
+		<h1>You Must Enter Your First Name</h1>
+		<% end %>
+		<% if y == :last_name %>
+		<h1>You Must Enter Your Last Name</h1>
+		<% end %>
+	<% end %>
+	<% end %>
 	<% end %>
 </div>
 
@@ -48,9 +60,9 @@
 				  <h2 class="food_choices" style="font-family: Waltograph; border-bottom: 1px solid black; width: 150px; margin:0 auto;">Food Choices</h2>
 				 <p  style='height: 40px; line-height: 45px;'>
 					<%= f.radio_button(:food, "vegetarian") %>
-					<%= f.label :foo_veg, "<span class='wants'>I want </span>Vegetarian".html_safe %>
+					<%= f.label :foo_veg, "Vegetarian<span class='wants'> (Eggplant)</span>".html_safe %>
 					<%= f.radio_button(:food, "meat") %>
-					<%= f.label :food_meat, "<span class='wants'>I want </span>Meat".html_safe %>
+					<%= f.label :food_meat, "Meat<span class='wants'> (Beef and Salmon)</span>".html_safe %>
 					<%#= f.radio_button(:food, "fish") %>
 					<%#= f.label :foo_fish, "<span class='wants'>I want </span>Fish".html_safe %>
 				  </p>
