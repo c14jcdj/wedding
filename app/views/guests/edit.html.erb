@@ -4,6 +4,7 @@
 <div class="bg_rsvp"></div>
 
 <div id="error_box2" style="text-align:center; color: red;">
+  <div id="error_box_con2">
   <% if @errors %>
   <% @errors.each do |x| %>
   <% x.each do |y, z| %>
@@ -19,6 +20,7 @@
   <% end %>
   <% end %>
   <% end %>
+  </div>
 </div>
 
 <div id="edit_con">
@@ -53,7 +55,7 @@
 
   <p id='edit_food' style="display: <%= dis %>; height: 40px; line-height: 45px;">
   <%= f.radio_button(:food, "vegetarian") %>
-  <%= label_tag(:foo_veg, "Vegetarian<span class='wants'> (Eggplant)</span>".html_safe) %>
+  <%= label_tag(:foo_veg, "Vegetarian<span class='wants'></span>".html_safe) %>
   <%= f.radio_button(:food, "meat") %>
   <%= label_tag(:food_meat, "Meat<span class='wants'> (Beef and Salmon)</span>".html_safe) %>
   <%#= f.radio_button(:food, "fish") %>
@@ -92,6 +94,12 @@ function errorMsg(){
   }
 }
 
+function errorBox(){
+  if($(window).width() < 480){
+    setTimeout(function(){ $('#error_box2').css('display', 'none') }, 3000);
+  }
+}
+
 function bgOverlay() {
     var height = $(document).height()
     $('#bg_rsvp').css('height', height)   
@@ -101,6 +109,8 @@ function bgOverlay() {
   window.addEventListener("resize", bgOverlay, false);
   window.addEventListener("load", errorMsg, false);
   window.addEventListener("resize", errorMsg, false);
+  window.addEventListener("load", errorBox, false);
+  window.addEventListener("resize", errorBox, false);
 
 
 </script>

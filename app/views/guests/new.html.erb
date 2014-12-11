@@ -1,6 +1,7 @@
 <div class="bg_rsvp"></div>
 
 <div id="error_box" style="text-align:center; color: red;">
+	<div id="error_box_con">
 	<% if @errors %>
 	<% @errors.each do |x| %>
 	<% x.each do |y, z| %>
@@ -16,6 +17,7 @@
 	<% end %>
 	<% end %>
 	<% end %>
+	</div>
 </div>
 
 <div id="enter_code">
@@ -60,7 +62,7 @@
 				  <h2 class="food_choices" style="font-family: Waltograph; border-bottom: 1px solid black; width: 150px; margin:0 auto;">Food Choices</h2>
 				 <p  style='height: 40px; line-height: 45px;'>
 					<%= f.radio_button(:food, "vegetarian") %>
-					<%= f.label :foo_veg, "Vegetarian<span class='wants'> (Eggplant)</span>".html_safe %>
+					<%= f.label :foo_veg, "Vegetarian<span class='wants'></span>".html_safe %>
 					<%= f.radio_button(:food, "meat") %>
 					<%= f.label :food_meat, "Meat<span class='wants'> (Beef and Salmon)</span>".html_safe %>
 					<%#= f.radio_button(:food, "fish") %>
@@ -154,6 +156,12 @@ function errorMsg(){
 		$('.wrongway').css('display', 'none')
 	}
 }
+
+function errorBox(){
+	if($(window).width() < 480){
+		setTimeout(function(){ $('#error_box').css('display', 'none') }, 3000);
+	}
+}
 	
 
 
@@ -166,6 +174,8 @@ function bgOverlay() {
 	window.addEventListener("resize", bgOverlay, false);
 	window.addEventListener("load", errorMsg, false);
 	window.addEventListener("resize", errorMsg, false);
+	window.addEventListener("load", errorBox, false);
+	window.addEventListener("resize", errorBox, false);
 </script>
 
 <%= javascript_include_tag "wedding" %>
