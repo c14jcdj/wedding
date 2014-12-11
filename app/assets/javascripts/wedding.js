@@ -8,7 +8,6 @@ $( "#code_form" ).on( "submit", function( event ) {
     	  data : $(this).serialize(),
     	  success: function(resp) {
     	  		if(resp == true){
-    	  		
     	  		$('#code_form').css('display', 'none')
     	  		$('#form_error').css('display', 'none')
                 $('.form h1').css('display', 'none')

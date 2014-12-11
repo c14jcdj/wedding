@@ -1,4 +1,5 @@
 <div class="bg_rsvp"></div>
+
 <% if @guest %>
 <div id="rsvp_dec" style="display: none"><%= @guest.rsvp %></div>
 <% end %>
@@ -142,6 +143,9 @@
 			  		}
 
 	}
+	if($('#rsvpTitle').css('display') == 'none'){
+  		$('#landingmobile').css('display', 'none')
+	}
 
 	$(".rsvp_yes").on("change", function(){
   		$('#form_food').css('display', 'block')
@@ -151,6 +155,7 @@
 	$(".rsvp_no").on("change", function(){
   		$('#form_food').css('display', 'none')
 	});
+
 
 function errorMsg(){
   if($(window).height() < 420 && $(window).width() < 575){
