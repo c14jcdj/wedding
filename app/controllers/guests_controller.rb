@@ -11,8 +11,19 @@ def create
   if (guest_params['rsvp'] == 'false') 
     @guest.food = 'NA'
   end
-  unless (@guest.valid?)
+
+  if(guest_params['rsvp'] == 'true' && @guest.food == 'NA')
+    @errors[:food] = 'x'
+    end
+
+    p '-----'
+    p guest_params['rsvp'] == nil
+  unless (@guest.valid? )
+    if ( guest_params['rsvp'] == nil)
+      @errors = [[:rsvp], ['y']]
+    else
     @errors = @guest.errors.messages
+    end
     render 'new'
     return
   end

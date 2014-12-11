@@ -2,9 +2,9 @@
 <% if @guest %>
 <div id="rsvp_dec" style="display: none"><%= @guest.rsvp %></div>
 <% end %>
+<% if @errors %>
 <div id="error_box" style="text-align:center; color: red;">
 	<div id="error_box_con">
-	<% if @errors %>
 	<% @errors.each do |x| %>
 	<% x.each do |y, z| %>
 		<% if y == :food %>
@@ -16,11 +16,14 @@
 		<% if y == :last_name %>
 		<h1>You Must Enter Your Last Name</h1>
 		<% end %>
-	<% end %>
+		<% if y == :rsvp %>
+		<h1>You Must Choose a Status</h1>
+		<% end %>
 	<% end %>
 	<% end %>
 	</div>
 </div>
+<% end %>
 
 <div id="enter_code">
 
@@ -129,8 +132,7 @@
 </footer>
 
 <script type="text/javascript">
-
-	if ($.trim($('#error_box').html())){
+	if ($.trim($('#error_box').text()) != ""){
 			  		$('#code_form').css('display', 'none')
 			  		$('#form_error').css('display', 'none')
 		            $('.form h1').css('display', 'none')
