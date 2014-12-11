@@ -48,7 +48,7 @@ def create
     redirect_to @guest
   else
     @errors = @guest.errors.messages 
-    if(guest_params['rsvp'] == 'true')
+    if(guest_params['rsvp'] == 'true' && @guest.food == 'NA')
     @errors[:food] = 'x'
     end
     render 'edit'

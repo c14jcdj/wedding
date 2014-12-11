@@ -1,5 +1,7 @@
 <div class="bg_rsvp"></div>
-
+<% if @guest %>
+<div id="rsvp_dec" style="display: none"><%= @guest.rsvp %></div>
+<% end %>
 <div id="error_box" style="text-align:center; color: red;">
 	<div id="error_box_con">
 	<% if @errors %>
@@ -128,13 +130,14 @@
 
 <script type="text/javascript">
 
-	
 	if ($.trim($('#error_box').html())){
 			  		$('#code_form').css('display', 'none')
 			  		$('#form_error').css('display', 'none')
 		            $('.form h1').css('display', 'none')
 			  		$('#form_rsvp').css('display', 'block')
+			  		if ($('#rsvp_dec').text() == 'true'){
   					$('#form_food').css('display', 'block')
+			  		}
 
 	}
 
